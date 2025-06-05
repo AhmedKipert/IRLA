@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../images/femme_contact.jpg);
+    background-image: url("../images/femme_contact.jpg");
 }
 .contact-header .black {
     width: 100%;
