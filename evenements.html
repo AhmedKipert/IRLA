@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page details</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .conteneur-page {
+            padding: 20px 5%;
+        }
+        .noms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+        ul {
+            list-style: none;
+        }
+        .imgtop {
+            width: 40%;
+        }
+
+        .detail-actualite .header-img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.detail-actualite .date {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.detail-actualite blockquote {
+  font-style: italic;
+  padding: 15px 20px;
+  border-left: 5px solid #1b365d;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.gallery img {
+  width: 48%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cta {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-left: 4px solid #1b365d;
+  border-radius: 6px;
+}
+
+.cta .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1b365d;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- DEBUT NAVBAR -->
+    <header>
+        <section class="contact">
+          <img src="./images/logo_irla.jpg" alt="logo" />
+          <section class="tel">
+            <img src="./images/tel_icone.png" alt="tel" />
+            <div class="text">
+              <h4 style="color: orange;">Besoin d'aide!</h4>
+            <p>+224 628 62 78 78</p>
+            </div>
+            
+          </section>
+        </section>
+        <nav>
+          <form action="#">
+            <input type="text" placeholder="Recherchez une information">
+            <input style="cursor: pointer; width: fit-content; padding: 5px 10px; border-radius: 3px;" type="submit" class="sub" value="Rechercher">
+          </form>
+          <ul style="position: relative;">
+            <li><a class="lk" href="index.html">Accueil</a></li>
+            <li class="go">
+                <a class="lk" href="actualites">Actualités</a>
+              </li>
+              <li style="position: relative;">
+                <!-- LISTE DEROULANTE REALISATIONS -->
+          <div style="position: relative;">
+            <div class="realisations">
+            <div style="text-align: center; cursor: default;" class="premier">Réalisation <i class="fas fa-chevron-down" style="margin-left: 5px;"></i></div>
+            <div class="elements">
+              <a href="projets.html">Projets & Perspectives</a>
+              <a href="productions.html">Production</a>
+              <a href="evenements.html">Evénements</a>
+            </div>
+          </div>
+          </div>
+          <!-- lISTE DEROULATE POUR LES LANGUES -->
+              </li>
+            <li><a class="lk" href="apropos.html">A propos</a></li>
+            <li><a class="lk" href="contact.html">Contact</a></li>
+  
+          </ul>
+          <!-- lISTE DEROULATE POUR LES LANGUES -->
+          <div style="position: relative;">
+            <div class="langues">
+            <div class="selecteur" style="cursor: default;">FR <i class="fas fa-chevron-down" style="margin-left: 5px;"></i></div>
+            <div class="langs">
+              <a href="#">EN</a>
+              <a href="#">ES</a>
+            </div>
+          </div>
+          </div>
+          
+          <label for="toggle"><i class="fas fa-bars fa-2x" style="color: white; border: 1px solid white; padding: 3px; border-radius: 5px; cursor: pointer;"></i></label>
+        <input type="checkbox" id="toggle" hidden>
+        
+        </nav>
+      </header>
+      <!-- FIN NAVBAR -->
+    <div class="evenements-page">
+        
+          
+    </div>
+
+    <!-- DEBUT DE LA SECTION PIED DE PAGE -->
+    <footer>
+        <section class="footer-top">
+          <section>
+            <img class="logo-footer" src="./images/logo_irla.jpg" alt="logo-irla">
+            <p><p>
+              L’Institut de Recherche Linguistique Appliquée (IRLA) <span class="no-mobile"> œuvre à la valorisation, à la sauvegarde et à la </span>promotion des langues nationales de Guinée à travers la recherche, l’enseignement et la production de ressources pédagogiques. 
+            </p>
+            
+            </p>
+        </section>
+        <section class="liens-rapide">
+          <h2>LIENS RAPIDES</h2>
+          <hr>
+          <a href="actualites">Nos actualités</a>
+          <a href="evenements.html">Nos Evénements</a>
+          <a href="projets">Nos Projets & perspectives</a>
+          <a href="productions">Nos productions</a>
+          <a href="contact.html">Nous écrire</a>
+          
+          <div class="sociaux">
+            <a href="#"><img class="reseaux" src="./images/facebook.png" alt="fb-logo"></a>
+          <a href="#"><img class="reseaux" src="./images/x.png" alt="x-logo"></a>
+          <a href="#"><img class="reseaux" style="width:50px" src="./images/instagram.png" alt="insta-logo"></a>
+  
+          </div>
+        </section>
+        <section class="contactez-nous">
+          <h2>CONTACTEZ-NOUS </h2>
+          <hr>
+          <p><i class="fas fa-map-marker" style="margin-right: 10px;"></i>Téminètaye, C/Kaloum-Conakry</p>
+          <p><i class="fas fa-envelope" style="margin-right: 10px"></i>info@irla.gov.gn</p>
+          <p><a href="#"></a><i class="fas fa-phone" style="margin-right: 5px"></i> +224 628 62 78 78</p>
+        </section>
+        </section>
+  
+        <section class="footer-bottom">
+          <nav>
+            <ul>
+              <li><a class="lk" href="#">Accueil</a></li>
+              <li><a class="lk" href="apropos.html">A propos</a></li>
+              <li><a class="lk" href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+  
+          <p style="color:rgb(134, 132, 132)">IRLA &copy; 20025. Tous droits réservés.</p>
+  
+          <img class="branding" src="./images/branding.png" alt="logo-guinee">
+        </section>
+        
+      </footer>
+      <!-- FIN DE LA SECTION PIED DE PAGE -->
+</body>
+</html>

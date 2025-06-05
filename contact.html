@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>HTML</title>
+
+    <!-- HTML -->
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="icon" type="image/jpg" href="favicon.jpg" />
+  </head>
+
+  <body>
+    <!-- DEBUT NAVBAR -->
+    <header>
+      <section class="contact">
+        <img src="./images/logo_irla.jpg" alt="logo" />
+        <section class="tel">
+          <img src="./images/tel_icone.png" alt="tel" />
+          <div class="text">
+            <h4 style="color: orange">Appelez-nous</h4>
+            <span>+224 628 62 78 78</span>
+          </div>
+        </section>
+      </section>
+      <nav>
+        <form action="#">
+          <input
+            type="text"
+            placeholder="Recherchez une information"
+            required
+          />
+          <input
+            style="
+              cursor: pointer;
+              width: fit-content;
+              padding: 5px 10px;
+              border-radius: 3px;
+            "
+            type="submit"
+            class="sub"
+            value="Rechercher"
+          />
+        </form>
+        <ul style="position: relative">
+          <li><a class="lk" href="index.html">Accueil</a></li>
+          <li class="go">
+            <a class="lk" href="actualites.html">Actualités</a>
+          </li>
+          <li style="position: relative">
+            <!-- LISTE DEROULANTE REALISATIONS -->
+            <div style="position: relative">
+              <div class="realisations">
+                <div
+                  style="text-align: center; cursor: default"
+                  class="premier"
+                >
+                  Réalisation
+                  <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+                </div>
+                <div class="elements">
+                  <a href="projets.html">Projets & Perspectives</a>
+                  <a href="productions.html">Production</a>
+                  <a href="actualites.html#evenements">Evénements</a>
+                </div>
+              </div>
+            </div>
+            <!-- lISTE DEROULATE POUR LES LANGUES -->
+          </li>
+          <li><a class="lk" href="apropos.html">A propos</a></li>
+          <li><a class="lk" href="contact.html">Contact</a></li>
+        </ul>
+        <!-- lISTE DEROULATE POUR LES LANGUES -->
+        <div class="clang" style="position: relative">
+          <div class="langues">
+            <div class="selecteur" style="cursor: default">
+              FR <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+            </div>
+            <div class="langs">
+              <a href="#">EN</a>
+              <a href="#">ES</a>
+            </div>
+          </div>
+        </div>
+
+        <label for="toggle"
+          ><i
+            class="fas fa-bars fa-2x"
+            style="
+              color: white;
+              border: 1px solid white;
+              padding: 3px;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          ></i
+        ></label>
+        <input type="checkbox" id="toggle" hidden />
+      </nav>
+    </header>
+    <!-- FIN NAVBAR -->
+    <!-- FIN NAVBAR -->
+    <section class="contact-container mc">
+      <div class="contact-header">
+        <div class="black"></div>
+        <h1>CONTACTEZ-NOUS</h1>
+      </div>
+      <div>
+        <h3 style="text-align: center">
+          Nous sommes disponibles pour répondre à toutes vos questions
+          concernant nos activités lingusitiques et culturelles
+        </h3>
+      </div>
+      <section class="contact">
+        <section class="localisation">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.3582415015537!2d-13.678921!3d9.5418145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xf1cd70018a93929%3A0xa3856cf80f00f9bb!2sAUF%20Guin%C3%A9e!5e0!3m2!1sfr!2sgn!4v1715261351733!5m2!1sfr!2sgn"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </section>
+        <form class="contact-form" action="" method="" accept-charset="utf-8">
+          <!-- <h1>
+        Contactez-nous
+      </h1> -->
+          <div class="b-nom">
+            <label for="nom">Nom complet</label>
+            <input
+              type="text"
+              name="nom"
+              id="nom"
+              value=""
+              placeholder="Entrez votre nom"
+              required
+            />
+          </div>
+
+          <div class="b-email">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="ad-email"
+              id="email"
+              value=""
+              placeholder="Entrez votre email"
+              required
+            />
+          </div>
+
+          <div class="b-message">
+            <label for="message">Message</label>
+            <textarea
+              cols="10"
+              rows="6"
+              name="message"
+              id="message"
+              value=""
+              placeholder="Rediger votre message..."
+              required
+            ></textarea>
+          </div>
+          <div class="sociaux">
+            <a href="https://www.facebook.com/irla.guinee"
+              ><img class="reseaux" src="./images/facebook.png" alt="fb-logo"
+            /></a>
+            <a href="#"
+              ><img class="reseaux" src="./images/x.png" alt="x-logo"
+            /></a>
+            <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+              ><img
+                class="reseaux"
+                src="./images/social-media-logo-design.png"
+                alt="linked-logo"
+            /></a>
+          </div>
+          <input class="bbtn" type="submit" id="fbtn" value="SOUMETTRE" />
+        </form>
+      </section>
+    </section>
+
+    <!-- DEBUT DE LA SECTION PIED DE PAGE -->
+    <footer>
+      <section class="footer-top">
+        <section>
+          <img
+            class="logo-footer"
+            src="./images/logo_irla.jpg"
+            alt="logo-irla"
+          />
+          <p></p>
+          <p>
+            L’Institut de Recherche Linguistique Appliquée (IRLA)
+            <span class="no-mobile">
+              œuvre à la valorisation, à la sauvegarde et à la </span
+            >promotion des langues nationales de Guinée à travers la recherche,
+            l’enseignement et la production de ressources pédagogiques.
+          </p>
+        </section>
+        <section class="liens-rapide">
+          <h3>LIENS RAPIDES</h3>
+          <hr />
+          <a href="actualites.html">Nos actualités</a>
+          <a href="actualites.html#evenements">Nos Evénements</a>
+          <a href="projets.html">Nos Projets & perspectives</a>
+          <a href="productions.html">Nos productions</a>
+          <a href="contact.html">Nous écrire</a>
+
+          <div class="sociaux">
+            <a href="https://www.facebook.com/irla.guinee"
+              ><img class="reseaux" src="./images/facebook.png" alt="fb-logo"
+            /></a>
+            <a href="#"
+              ><img class="reseaux" src="./images/x.png" alt="x-logo"
+            /></a>
+            <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+              ><img
+                class="reseaux"
+                src="./images/social-media-logo-design.png"
+                alt="linked-logo"
+            /></a>
+          </div>
+        </section>
+        <section class="contactez-nous">
+          <h3>CONTACTEZ-NOUS</h3>
+          <hr />
+          <p>
+            <i class="fas fa-clock" style="margin-right: 10px"></i>Ouvert de 08h
+            à 16h du Lundi au Vendredi
+          </p>
+          <p>
+            <i class="fas fa-map-marker" style="margin-right: 10px"></i
+            >Téminètaye, C/Kaloum-Conakry
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="mailto:info@irla.gov.gn"
+              ><i class="fas fa-envelope" style="margin-right: 10px"></i
+              >info@irla.gov.gn</a
+            >
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="tel:+224628627878"
+              ><i class="fas fa-phone" style="margin-right: 5px"></i> +224 628
+              62 78 78</a
+            >
+          </p>
+        </section>
+      </section>
+
+      <section class="footer-bottom">
+        <nav>
+          <ul>
+            <li><a class="lk" href="index.html">Accueil</a></li>
+            <li><a class="lk" href="apropos.html">A propos</a></li>
+            <li><a class="lk" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <p style="color: rgb(134, 132, 132)">
+          IRLA &copy; 20025. Tous droits réservés.
+        </p>
+
+        <img class="branding" src="./images/branding.png" alt="logo-guinee" />
+      </section>
+    </footer>
+    <!-- FIN DE LA SECTION PIED DE PAGE -->
+  </body>
+</html>

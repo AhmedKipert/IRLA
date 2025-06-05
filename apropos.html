@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRLA -A propos</title>
+    <link rel="stylesheet" href="all.min.css" />
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+<link rel="stylesheet" href="index.css" />
+
+    <style>
+      .head {
+        width: 100%;
+        height: 40vh;
+        background-image: url(./images/nous.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        display: flex;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+      }
+
+      .head .text {
+        text-align: center;
+        color: white;
+        padding: 20px;
+        z-index: 10;
+        line-height: 1.5rem;
+        gap: 15px;
+      }
+
+      .left2 #profil {
+        border-radius: 50%;
+        border: 5px solid darkblue;
+      }
+
+      .left2 img {
+        width: 100%;
+      }
+      .left2 {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .statistiques {
+        width: 100%;
+        /* background-color: navy; */
+        display: grid;
+        gap: 30px;
+
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .statistiques div img {
+        width: 100%;
+      }
+
+      .statistiques div:nth-child(2),
+      .statistiques div:nth-child(3) {
+        margin-top: 50px;
+      }
+
+      .statistiques div .stat {
+        position: absolute;
+        top: 38%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        font-size: 1.2rem;
+      }
+
+      .statistiques div {
+        position: relative;
+        text-align: center;
+        border-radius: 5px;
+        color: black !important;
+      }
+
+      .statistiques .stat-desc {
+        font-size: 1.1rem;
+      }
+
+      .stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+      }
+
+      @media screen and (max-width: 769px) {
+        .statistiques {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+
+        .statistiques div {
+          margin: 0 !important;
+        }
+        .statistiques {
+          grid-template-columns: 1fr !important;
+        }
+
+        .services .scards {
+          grid-template-columns: 1fr !important;
+        }
+        .mots {
+          grid-template-columns: 1fr !important;
+          align-items: center;
+          justify-content: center;
+        }
+        .nos-valeurs .cards {
+          grid-template-columns: 1fr !important;
+        }
+
+        .card {
+          border: 2px;
+        }
+
+        .transition-cards,
+        .cards {
+          grid-template-columns: 1fr !important;
+        }
+
+        .histoire {
+          grid-template-columns: 1fr !important;
+        }
+        .histoire .hg {
+          display: none;
+        }
+
+        .gallerie .photos {
+          grid-template-columns: 1fr 1fr !important;
+        }
+      }
+
+      @media (min-width: 700px) and (max-width: 1024px) {
+        .statistiques .card {
+          margin: 0 !important;
+        }
+        .statistiques,
+        .transition-cards,
+        .nos-valeurs .cards,
+        .vision-strategie {
+          grid-template-columns: 1fr 1fr !important;
+        }
+        .services .scards,
+        .nos-equipe .cards {
+          grid-template-columns: 1fr 1fr !important;
+          grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .directeur .mots,
+        .histoire {
+          grid-template-columns: 1fr !important;
+        }
+        .histoire .hg {
+          display: none;
+        }
+
+        .photos {
+          grid-template-columns: 1fr 1fr !important;
+        }
+
+        /* RESPONSIVE PIED DE PAGE -FOOTER- */
+        .footer-bottom {
+          flex-direction: column;
+        }
+        footer .footer-top {
+          grid-template-columns: 1fr 1fr !important;
+          grid-template-rows: 1fr 0fr;
+        }
+        .footer-top .contactez-nous {
+          grid-column: span 2;
+        }
+        .footer-bottom {
+          grid-template-columns: 1fr !important;
+          grid-template-rows: 1fr 1fr;
+        }
+        .footer-bottom nav {
+          grid-column: span 2;
+        }
+        .footer-bottom img {
+          margin-left: auto;
+        }
+        footer .no-mobile {
+          display: none;
+        }
+        /* FIN RESPONSIVE PIED DE PAGE -FOOTER- */
+      }
+
+      .btns {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: auto;
+      }
+
+      .btns a,
+      .tla {
+        color: white;
+        text-decoration: none;
+        padding: 5px 15px;
+        background-color: #e3923d;
+        border-radius: 40px;
+        font-size: 1.2rem;
+        z-index: 10;
+      }
+
+      .tla {
+        margin: auto;
+      }
+
+      .btns a:hover {
+        background-color: #c26d3b;
+      }
+
+      .nos-valeurs .cards {
+        padding: 20px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        background-color: rgb(236, 232, 232);
+        gap: 20px;
+      }
+
+      .nos-valeurs .cards ul {
+        list-style: none;
+        padding: 10px;
+      }
+
+      .nos-valeurs .cards ul li {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .nos-equipe .sociaux img {
+        width: 80px;
+      }
+
+      .sombre {
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        opacity: 0.5;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-bottom: 30px;
+        padding: 20px 5%;
+      }
+      .directeur {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .directeur .titre {
+        background-color: #1b365d;
+        padding: 10px;
+        color: white;
+      }
+
+      .mots {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        line-height: 1.5rem;
+        /* border: 2px solid lime; */
+        gap: 20px;
+        justify-content: center;
+        line-height: 1.5rem;
+      }
+
+      .directeur .titre {
+        text-align: center;
+      }
+
+      .photo img {
+        width: 100%;
+      }
+
+      .transition {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      .transition-cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        background-color: #ececec;
+        padding: 10px;
+      }
+
+      .photo {
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+      }
+      .element {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .element img {
+        width: 50px;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .nos-equipe .cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        /* border: 5px solid red; */
+      }
+      .nos-equipe .cards .card {
+        display: flex;
+        text-align: center;
+        /* border: 5px solid red; */
+      }
+
+      .gallerie .photos {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-columns: 1fr;
+        padding: 30px;
+        gap: 20px;
+        background-color: #e3923d;
+      }
+      .gallerie .photos img {
+        width: 100%;
+      }
+      .gallerie,
+      .nos-equipe,
+      .nos-valeurs {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .historique {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .histoire {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 20px;
+        object-fit: cover;
+      }
+      .histoire img {
+        width: 100%;
+        object-fit: cover;
+      }
+      .transition i {
+        color: #1b365d;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- DEBUT NAVBAR -->
+    <header>
+      <section class="contact">
+        <img src="./images/logo_irla.jpg" alt="logo" />
+        <section class="tel">
+          <img src="./images/tel_icone.png" alt="tel" />
+          <div class="text">
+            <h4 style="color: orange">Appelez-nous</h4>
+            <span>+224 628 62 78 78</span>
+          </div>
+        </section>
+      </section>
+      <nav>
+        <form action="#">
+          <input
+            type="text"
+            placeholder="Recherchez une information"
+            required
+          />
+          <input
+            style="
+              cursor: pointer;
+              width: fit-content;
+              padding: 5px 10px;
+              border-radius: 3px;
+            "
+            type="submit"
+            class="sub"
+            value="Rechercher"
+          />
+        </form>
+        <ul style="position: relative">
+          <li><a class="lk" href="index.html">Accueil</a></li>
+          <li class="go">
+            <a class="lk" href="actualites.html">Actualités</a>
+          </li>
+          <li style="position: relative">
+            <!-- LISTE DEROULANTE REALISATIONS -->
+            <div style="position: relative">
+              <div class="realisations">
+                <div
+                  style="text-align: center; cursor: default"
+                  class="premier"
+                >
+                  Réalisation
+                  <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+                </div>
+                <div class="elements">
+                  <a href="projets.html">Projets & Perspectives</a>
+                  <a href="productions.html">Production</a>
+                  <a href="actualites.html#evenements">Evénements</a>
+                </div>
+              </div>
+            </div>
+            <!-- lISTE DEROULATE POUR LES LANGUES -->
+          </li>
+          <li><a class="lk" href="apropos.html">A propos</a></li>
+          <li><a class="lk" href="contact.html">Contact</a></li>
+        </ul>
+        <!-- lISTE DEROULATE POUR LES LANGUES -->
+        <div class="clang" style="position: relative">
+          <div class="langues">
+            <div class="selecteur" style="cursor: default">
+              FR <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+            </div>
+            <div class="langs">
+              <a href="#">EN</a>
+              <a href="#">ES</a>
+            </div>
+          </div>
+        </div>
+
+        <label for="toggle"
+          ><i
+            class="fas fa-bars fa-2x"
+            style="
+              color: white;
+              border: 1px solid white;
+              padding: 3px;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          ></i
+        ></label>
+        <input type="checkbox" id="toggle" hidden />
+      </nav>
+    </header>
+    <!-- FIN NAVBAR -->
+
+    <!-- A PROPOS ENTETE -->
+    <section class="head">
+      <div class="sombre"></div>
+      <div class="text">
+        <h1 style="padding-top: 50px">A PROPOS DE NOUS</h1>
+      </div>
+
+      <div class="btns">
+        <!-- <a href="#">A propos de nous</a> -->
+        <a href="contact.html">Contactez nous</a>
+      </div>
+    </section>
+    <!-- FIN A PROPOS ENTETE -->
+    <section class="container mc">
+      <section class="introduction">
+        <h2>Présentation de l'Institution</h2>
+        <p>
+          L’Institut de Recherche Linguistique Appliquée (IRLA) est un
+          Etablissement Public à caractère scientifique et technique chargé de
+          sauvegarder et de développer le patrimoine linguistique guinéen,
+          support privilégié de la culture nationale dans sa diversité. Il est
+          créé par l’Ordonnance No304/PRG/SGG/du 12 Décembre 1985. Placé sous la
+          tutelle du Ministère de l’Enseignement Supérieur, de la Recherche
+          Scientifique et de l’Innovation. (M.E.S.R.S.I).
+        </p>
+        <br />
+        <h3>Les principaux objectifs de l’IRLA sont :</h3>
+        <p>
+          Concevoir et mettre en place des programmes de recherches adaptés aux
+          besoins nationaux de développement des langues nationales ; Promouvoir
+          la recherche linguistique et sociolin guistique ; Valoriser les
+          résultats de recherche sur les langues nationales ; Devenir un
+          véritable organe de coordination des activités de recherche
+          linguistique nationale, et un centre d’excellence dans la sous-région
+          ; Promouvoir la coopération et le partenariat avec des institutions
+          nationales et internationales
+        </p>
+      </section>
+
+      <section class="stats">
+        <h2>IRLA C'est aujourd'hui</h2>
+        <hr style="background-color: blue; width: 100%" />
+        <section class="statistiques">
+          <div class="card">
+            <div class="top">
+              <img src="./images/logo_ble2.png" alt="stats" />
+              <h2 class="stat">24 <br />Langues documentées</h2>
+            </div>
+            <p class="stat-desc">
+              Langues nationales analysées et répertoriées
+            </p>
+          </div>
+          <div class="card">
+            <div class="top">
+              <img src="./images/logo_ble2.png" alt="stats" />
+              <h2 class="stat">507+ <br />Projets & Perspectives</h2>
+            </div>
+
+            <p class="stat-desc">Etudes et publication menées depuis 10 ans</p>
+          </div>
+          <div class="card">
+            <div class="top">
+              <img src="./images/logo_ble2.png" alt="stats" />
+              <h2 class="stat">15 <br />Collaborations académiques</h2>
+            </div>
+
+            <p class="stat-desc">Partenariats nationnaux et internationaux</p>
+          </div>
+          <div class="card">
+            <div class="top">
+              <img src="./images/logo_ble2.png" alt="stats" />
+              <h2 class="stat">120+ <br />Supports pédagogique</h2>
+            </div>
+
+            <p class="stat-desc">Livres, manuels, dictionnaires produits</p>
+          </div>
+        </section>
+      </section>
+
+      <!-- SECTION DIRECTEUR -->
+      <section class="directeur">
+        <h4 class="titre">MOT DU DIRECTEUR GÉNÉRAL</h4>
+        <section class="mots">
+          <div class="photo">
+            <img
+              src="./images/le_directeur.jpg"
+              alt="Photo du Directeur Général"
+            />
+          </div>
+
+          <div class="discours">
+            <h4>Chers internautes,</h4>
+            <p>
+              C’est avec un grand plaisir que je vous souhaite la bienvenue sur
+              le site officiel de l’Institut de Recherche en Langues Appliquées
+              (IRLA). En tant qu’établissement public chargé de la mise en œuvre
+              de la politique linguistique nationale, notre mission est de
+              promouvoir, préserver et valoriser les langues nationales
+              guinéennes.
+            </p>
+            <p>
+              La Guinée, riche d’une diversité culturelle et linguistique
+              exceptionnelle, possède un patrimoine oral immense : contes,
+              proverbes, légendes et maximes qui véhiculent des valeurs
+              profondes. Ces éléments sont le socle de notre identité collective
+              et méritent d’être transmis, étudiés et intégrés dans le
+              développement éducatif et social.
+            </p>
+            <p>
+              Mes collaborateurs et moi-même croyons fermement que nos langues
+              nationales sont des outils puissants de transmission des savoirs,
+              de cohésion sociale et de développement durable. Ce site est une
+              porte d’entrée vers nos travaux, nos projets et notre vision
+              partagée d’un avenir enraciné dans notre culture.
+            </p>
+            <p>
+              Merci pour votre visite. Nous vous souhaitons une excellente
+              navigation sur notre site.
+            </p>
+
+            <p style="margin-top: 20px">
+              <strong>Dr Mohamed Bintou Keita</strong><br />
+              Directeur Général de l'IRLA
+            </p>
+          </div>
+        </section>
+        <hr />
+        <section class="transition">
+          <h2>Les Chantiers de la transition</h2>
+          <div class="transition-cards">
+            <div class="element">
+              <i class="fas fa-landmark fa-3x"></i>
+              <h4>LA REFONDATION DE L'ÉTAT</h4>
+              <p>
+                Promouvoir un fonctionnement impartial, transparent et
+                responsable des institutions publiques.
+              </p>
+            </div>
+
+            <div class="element">
+              <i class="fas fa-handshake fa-3x"></i>
+              <h4>L’APAISEMENT SOCIOPOLITIQUE</h4>
+              <p>
+                Favoriser le dialogue, la paix sociale et la stabilité nationale
+                à travers les valeurs de tolérance et d’unité.
+              </p>
+            </div>
+
+            <div class="element">
+              <i class="fas fa-scale-balanced fa-3x"></i>
+              <h4>LA LUTTE CONTRE LA CORRUPTION</h4>
+              <p>
+                Combattre la prévarication et assurer une gestion saine et
+                équitable des ressources publiques.
+              </p>
+            </div>
+
+            <div class="element">
+              <i class="fas fa-sitemap fa-3x"></i>
+              <h4>LES RÉFORMES INSTITUTIONNELLES</h4>
+              <p>
+                Renforcer l’autonomie et l'efficacité des établissements publics
+                à travers une gouvernance structurée.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="historique">
+        <h2 style="text-align: center">Notre Histoire</h2>
+        <div class="histoire">
+          <div class="hg">
+            <img src="./images/histoire2.jpg" alt="" />
+          </div>
+          <div class="hd">
+            <p>
+              L’Académie des Langues avait, en particulier, pour mission de
+              travailler sur le corpus des langues guinéennes (description
+              phonologique, morphosyntaxique, lexicale…) et de mener des
+              recherches appliquées visant leur enseignement/apprentissage
+              (élaboration de grammaires, de dictionnaires, réflexion sur la
+              méthodologie d’enseignement des langues guinéennes, etc.) Seize
+              (16) ans de pratique. <br /><br />La Guinée, dès son accession à
+              l’indépendance, a fait de la promotion des langues nationales un
+              enjeu de politique publique. Dans cette optique, des conditions
+              institutionnelles, juridiques et matérielles ont été créées en vue
+              de promouvoir les langues nationales par l’enseignement formel,
+              l’alphabétisation, les médias, les expressions culturelles et
+              artistiques. écrite des langues nationales dans le cursus scolaire
+              et parascolaire ont prouvé les vertus et la capacité des langues
+              guinéennes à exprimer des abstractions et à véhiculer la science,
+              la technique et la technologie.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="nos-valeurs">
+        <h2>Nos valeurs fondamentales</h2>
+        <div class="cards">
+          <ul>
+            <li>
+              <h4>
+                <i
+                  class="fas fa-check-circle"
+                  style="color: goldenrod; margin-right: 10px"
+                ></i
+                >Engagement envers la diversité linguistique
+              </h4>
+              <p>
+                Nous valorisons la richesse linguistique de la Guinée en
+                préservant et en promouvant nos langues nationales comme
+                vecteurs de culture, d'identité et de développement durable.
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <h4>
+                <i
+                  class="fas fa-check-circle"
+                  style="color: goldenrod; margin-right: 10px"
+                ></i
+                >Excellence en recherche linguistique appliquée
+              </h4>
+              <p>
+                Nous menons des recherches rigoureuses pour améliorer
+                l'enseignement, l'apprentissage et la diffusion des langues
+                guinéennes, en lien avec les besoins sociétaux.
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <h4>
+                <i
+                  class="fas fa-check-circle"
+                  style="color: goldenrod; margin-right: 10px"
+                ></i
+                >Accessibilité et inclusion
+              </h4>
+              <p>
+                Nous œuvrons pour rendre les langues nationales accessibles à
+                tous, en développant des supports pédagogiques adaptés et en
+                facilitant leur utilisation dans les médias et l'administration.
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <h4>
+                <i
+                  class="fas fa-check-circle"
+                  style="color: goldenrod; margin-right: 10px"
+                ></i
+                >Partenariats et coopération
+              </h4>
+              <p>
+                Nous collaborons avec des institutions nationales et
+                internationales pour renforcer la recherche linguistique et
+                promouvoir les langues guinéennes à l'échelle régionale et
+                mondiale.
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <h4>
+                <i
+                  class="fas fa-check-circle"
+                  style="color: goldenrod; margin-right: 10px"
+                ></i
+                >Innovation et adaptation
+              </h4>
+              <p>
+                Nous développons des outils modernes pour l'enseignement des
+                langues, en intégrant les technologies numériques et en
+                harmonisant les alphabets pour une meilleure lisibilité.
+              </p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <h4>
+                <i
+                  class="fas fa-check-circle"
+                  style="color: goldenrod; margin-right: 10px"
+                ></i
+                >Transmission des savoirs traditionnels
+              </h4>
+              <p>
+                Nous préservons et transmettons les contes, proverbes et
+                légendes guinéennes, en les adaptant aux formats contemporains
+                pour les générations futures.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- DEBUT SECTION SERVICES -->
+      <section class="services">
+        <section class="services-header">
+          <h2>Ce que nous faisons</h2>
+          <p>
+            L’IRLA œuvre pour la promotion des langues nationales à travers des
+            projets de recherche, des outils pédagogiques et des innovations
+            culturelles. Nos activités s'inscrivent dans une logique de
+            valorisation du patrimoine linguistique et de développement durable.
+          </p>
+        </section>
+
+        <section class="scards">
+          <div
+            class="scard"
+            style="background-image: url(./images/manuels.jpg)"
+          >
+            <div class="text">
+              <div class="back"></div>
+              <h3>Recherche linguistique</h3>
+              <hr />
+              <p>
+                Nous menons des études sur les langues nationales afin de mieux
+                les documenter, les analyser et les préserver pour les
+                générations futures.
+              </p>
+            </div>
+          </div>
+
+          <div class="scard" style="background-image: url(./images/livres.jpg)">
+            <div class="text">
+              <div class="back"></div>
+              <h3>Production d’outils pédagogiques</h3>
+              <hr />
+              <p>
+                Nous créons des manuels scolaires, dictionnaires et supports en
+                langues locales pour renforcer l’éducation bilingue et
+                inclusive.
+              </p>
+            </div>
+          </div>
+
+          <div class="scard" style="background-image: url(./images/langue.jpg)">
+            <div class="text">
+              <div class="back"></div>
+              <h3>Standardisation des langues</h3>
+              <hr />
+              <p>
+                L’IRLA participe à l’harmonisation des orthographes, à la
+                création d’alphabets et à la normalisation linguistique en
+                partenariat avec l’État.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="scard"
+            style="background-image: url(./images/keyboard.jpg)"
+          >
+            <div class="text">
+              <div class="back"></div>
+              <h3>Innovation technologique</h3>
+              <hr />
+              <p>
+                Nous développons des claviers, des corpus numériques, et
+                d'autres outils digitaux pour moderniser l’usage des langues
+                africaines.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="scard"
+            style="background-image: url(./images/cultures.jpg)"
+          >
+            <div class="text">
+              <div class="back"></div>
+              <h3>Valorisation culturelle</h3>
+              <hr />
+              <p>
+                À travers des événements, publications et collaborations, nous
+                promouvons les cultures orales et les identités linguistiques du
+                pays.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- FIN SECTION SERVICE -->
+
+      <!-- DEBUT SECTION VISION-STRATEGIE -->
+      <section class="vision-strategie">
+        <div class="gauche">
+          <h2>Notre vision et notre stratégie</h2>
+          <p>
+            L’IRLA ambitionne de faire des langues nationales un levier de
+            développement, d’inclusion sociale et de renforcement identitaire.
+            Notre stratégie repose sur une approche scientifique, participative
+            et tournée vers l’innovation.
+          </p>
+        </div>
+        <div class="droite">
+          <ul>
+            <li>
+              <i class="fas fa-play fa-sm" style="margin-right: 10px"></i>
+              Promouvoir la recherche linguistique
+            </li>
+            <li>
+              <i class="fas fa-play fa-sm" style="margin-right: 10px"></i>
+              Renforcer l’enseignement bilingue
+            </li>
+            <li>
+              <i class="fas fa-play fa-sm" style="margin-right: 10px"></i>
+              Collaborer avec les communautés et institutions
+            </li>
+            <li>
+              <i class="fas fa-play fa-sm" style="margin-right: 10px"></i>
+              Intégrer les outils numériques
+            </li>
+            <li>
+              <i class="fas fa-play fa-sm" style="margin-right: 10px"></i>
+              Valoriser la diversité linguistique et culturelle
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- FIN SECTION VISION-STRATEGIE -->
+
+      <!-- DEBUT SECTION FAQ -->
+      <section class="questions">
+        <section class="questions-header">
+          <h2>Faits & Questions</h2>
+          <p>
+            Vous avez des questions sur l’IRLA ? Voici les réponses aux
+            interrogations les plus fréquentes.
+          </p>
+        </section>
+        <div class="questions-liste">
+          <details>
+            <summary>
+              <i
+                class="fas fa-plus-circle"
+                style="margin-right: 10px; color: #e3923d"
+              ></i
+              >Quelle est la mission principale de l’IRLA ?
+            </summary>
+            <p>
+              L’IRLA a pour mission de promouvoir les langues nationales à
+              travers la recherche linguistique, la production de supports
+              pédagogiques et la valorisation du patrimoine culturel guinéen.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              <i
+                class="fas fa-plus-circle"
+                style="margin-right: 10px; color: #e3923d"
+              ></i
+              >Où se trouve l’IRLA ?
+            </summary>
+            <p>
+              L’institut est basé à Temenètaye dans la commune de Kaloum, à
+              Conakry, en République de Guinée.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              <i
+                class="fas fa-plus-circle"
+                style="margin-right: 10px; color: #e3923d"
+              ></i
+              >Peut-on collaborer avec l’IRLA ?
+            </summary>
+            <p>
+              Oui. L’IRLA est ouvert aux partenariats académiques, culturels,
+              institutionnels et technologiques en lien avec les langues,
+              l’éducation ou la recherche appliquée.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              <i
+                class="fas fa-plus-circle"
+                style="margin-right: 10px; color: #e3923d"
+              ></i
+              >Proposez-vous des ressources en ligne ?
+            </summary>
+            <p>
+              Nous mettons progressivement en ligne des dictionnaires, des
+              manuels scolaires, des corpus linguistiques et des articles de
+              recherche via notre site officiel.
+            </p>
+          </details>
+
+          <details>
+            <summary>
+              <i
+                class="fas fa-plus-circle"
+                style="margin-right: 10px; color: #e3923d"
+              ></i
+              >Comment contacter l’IRLA ?
+            </summary>
+            <p>
+              Vous pouvez nous joindre par email à
+              <strong>contact@irla.gov.gn</strong> ou via notre page de contact.
+              Nous sommes également présents sur les réseaux sociaux.
+            </p>
+          </details>
+        </div>
+      </section>
+      <!-- FIN SECTION FAITS ET QUESTIONS -->
+
+      <section class="nos-equipe">
+        <h2>Rencontrez notre équipe</h2>
+        <section class="cards">
+          <div class="card">
+            <div class="left2">
+              <img
+                class="profil"
+                id="profi"
+                src="./images/dg.jpeg"
+                alt="image"
+              />
+              <p style="text-align: center">Dr Mohamed Bintou Keita</p>
+              <h4 style="font-style: italic">Directeur Général</h4>
+              <p>
+                Docteur en droit musulman et expert en finance islamique, il
+                dirige l’IRLA avec une vision axée sur la préservation des
+                langues nationales, l’innovation pédagogique et la coopération
+                internationale. Il est à l'origine du Prix Dre Diaka Sidibé.
+              </p>
+              <div class="sociaux">
+                <a href="https://www.facebook.com/irla.guinee"
+                  ><img
+                    class="reseaux"
+                    src="./images/facebook.png"
+                    alt="fb-logo"
+                /></a>
+                <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+                  ><img
+                    class="reseaux"
+                    src="./images/social-media-logo-design.png"
+                    alt="linked-logo"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="left2">
+              <img
+                class="profil"
+                id="profi"
+                src="./images/comptable.jpeg"
+                alt="image"
+              />
+              <p style="text-align: center">Abdourahamane Fofana</p>
+              <h4 style="font-style: italic">Comptable</h4>
+              <p>
+                Responsable de la gestion financière de l’IRLA, il garantit la
+                bonne allocation des ressources budgétaires et veille à la
+                conformité comptable des projets en cours.
+              </p>
+              <div class="sociaux">
+                <a href="https://www.facebook.com/irla.guinee"
+                  ><img
+                    class="reseaux"
+                    src="./images/facebook.png"
+                    alt="fb-logo"
+                /></a>
+                <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+                  ><img
+                    class="reseaux"
+                    src="./images/social-media-logo-design.png"
+                    alt="linked-logo"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="left2">
+              <img
+                class="profil"
+                id="profi"
+                src="./images/resp-info.jpeg"
+                alt="image"
+              />
+              <p style="text-align: center">Ibrahima Kalil Diallo</p>
+              <h4 style="font-style: italic">Responsable Informatique</h4>
+              <p>
+                En charge de la maintenance des systèmes informatiques, il
+                soutient la numérisation des ressources linguistiques et
+                l’accessibilité des données via les plateformes en ligne de
+                l’IRLA.
+              </p>
+              <div class="sociaux">
+                <a href="https://www.facebook.com/irla.guinee"
+                  ><img
+                    class="reseaux"
+                    src="./images/facebook.png"
+                    alt="fb-logo"
+                /></a>
+                <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+                  ><img
+                    class="reseaux"
+                    src="./images/social-media-logo-design.png"
+                    alt="linked-logo"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="left2">
+              <img
+                class="profil"
+                id="profi"
+                src="./images/inconnu.jpg"
+                alt="image"
+              />
+              <p style="text-align: center">Aissatou Barry</p>
+              <h4 style="font-style: italic">Chargée de Communication</h4>
+              <p>
+                Spécialiste en communication institutionnelle, elle valorise les
+                activités de l’IRLA à travers les médias et coordonne les
+                campagnes de sensibilisation sur les langues guinéennes.
+              </p>
+              <div class="sociaux">
+                <a href="https://www.facebook.com/irla.guinee"
+                  ><img
+                    class="reseaux"
+                    src="./images/facebook.png"
+                    alt="fb-logo"
+                /></a>
+                <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+                  ><img
+                    class="reseaux"
+                    src="./images/social-media-logo-design.png"
+                    alt="linked-logo"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="left2">
+              <img
+                class="profil"
+                &
+                id="profi"
+                src="./images/inconnu2.jpg"
+                alt="image"
+              />
+              <p style="text-align: center">Djenabou Soumah</p>
+              <h4 style="font-style: italic">Assistante Administratif</h4>
+              <p>
+                Appuie la gestion quotidienne des dossiers, l’organisation
+                logistique des projets et la coordination interne entre les
+                services administratifs et techniques.
+              </p>
+              <div class="sociaux">
+                <a href="https://www.facebook.com/irla.guinee"
+                  ><img
+                    class="reseaux"
+                    src="./images/facebook.png"
+                    alt="fb-logo"
+                /></a>
+                <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+                  ><img
+                    class="reseaux"
+                    src="./images/social-media-logo-design.png"
+                    alt="linked-logo"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section class="gallerie">
+        <h2>NOTRE GALLERIE</h2>
+        <div class="photos">
+          <img src="./images/barrrr-300x210.jpg" alt="image" />
+          <img
+            src="./images/Chef-de-groupe-linguistique-Kpele-irla-1-300x193.png"
+            alt="image"
+          />
+          <img
+            src="./images/Secretaire-Scientifique-IRLA-1-300x292.png"
+            alt="image"
+          />
+          <img src="./images/groupe_irla.jpg" alt="image" />
+          <img src="./images/remise.jpg" alt="image" />
+          <img src="./images/participants.jpg" alt="image" />
+          <img src="./images/inconnu.jpg" alt="image" />
+        </div>
+      </section>
+    </section>
+
+    <button class="scrolltop">
+      <i class="fas fa-long-arrow-up fa-lg"></i>
+    </button>
+    <!-- DEBUT DE LA SECTION PIED DE PAGE -->
+    <footer>
+      <section class="footer-top">
+        <section>
+          <img
+            class="logo-footer"
+            src="./images/logo_irla.jpg"
+            alt="logo-irla"
+          />
+          <p></p>
+          <p>
+            L’Institut de Recherche Linguistique Appliquée (IRLA)
+            <span class="no-mobile">
+              œuvre à la valorisation, à la sauvegarde et à la </span
+            >promotion des langues nationales de Guinée à travers la recherche,
+            l’enseignement et la production de ressources pédagogiques.
+          </p>
+        </section>
+        <section class="liens-rapide">
+          <h3>LIENS RAPIDES</h3>
+          <hr />
+          <a href="actualites.html">Nos actualités</a>
+          <a href="actualites.html#evenements">Nos Evénements</a>
+          <a href="projets.html">Nos Projets & perspectives</a>
+          <a href="productions.html">Nos productions</a>
+          <a href="contact.html">Nous écrire</a>
+
+          <div class="sociaux">
+            <a href="https://www.facebook.com/irla.guinee"
+              ><img class="reseaux" src="./images/facebook.png" alt="fb-logo"
+            /></a>
+            <a href="#"
+              ><img class="reseaux" src="./images/x.png" alt="x-logo"
+            /></a>
+            <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+              ><img
+                class="reseaux"
+                src="./images/social-media-logo-design.png"
+                alt="linked-logo"
+            /></a>
+          </div>
+        </section>
+        <section class="contactez-nous">
+          <h3>CONTACTEZ-NOUS</h3>
+          <hr />
+          <p>
+            <i class="fas fa-clock" style="margin-right: 10px"></i>Ouvert de 08h
+            à 16h du Lundi au Vendredi
+          </p>
+          <p>
+            <i class="fas fa-map-marker" style="margin-right: 10px"></i
+            >Téminètaye, C/Kaloum-Conakry
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="mailto:info@irla.gov.gn"
+              ><i class="fas fa-envelope" style="margin-right: 10px"></i
+              >info@irla.gov.gn</a
+            >
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="tel:+224628627878"
+              ><i class="fas fa-phone" style="margin-right: 5px"></i> +224 628
+              62 78 78</a
+            >
+          </p>
+        </section>
+      </section>
+
+      <section class="footer-bottom">
+        <nav>
+          <ul>
+            <li><a class="lk" href="index.html">Accueil</a></li>
+            <li><a class="lk" href="apropos.html">A propos</a></li>
+            <li><a class="lk" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <p style="color: rgb(134, 132, 132)">
+          IRLA &copy; 20025. Tous droits réservés.
+        </p>
+
+        <img class="branding" src="./images/branding.png" alt="logo-guinee" />
+      </section>
+    </footer>
+    <!-- FIN DE LA SECTION PIED DE PAGE -->
+  </body>
+</html>

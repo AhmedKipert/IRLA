@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRLA -Visite de CELHTO</title>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+<link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="all.min.css" />
+    <style>
+      .conteneur-page {
+        padding: 20px 5%;
+      }
+      .noms {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+      }
+      ul {
+        list-style: none;
+      }
+      .imgtop {
+        width: 40%;
+      }
+      .detail-actualite .header-img {
+        width: 100%;
+        max-height: 70vh;
+        object-position: 0 0;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .detail-actualite .date {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+
+      .detail-actualite blockquote {
+        font-style: italic;
+        padding: 15px 20px;
+        border-left: 5px solid #1b365d;
+        margin: 20px 0;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+      }
+
+      .gallery {
+        display: flex;
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .gallery img {
+        width: 48%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .cta {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-left: 4px solid #1b365d;
+        border-radius: 6px;
+      }
+
+      .cta .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #1b365d;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- DEBUT NAVBAR -->
+    <header>
+      <section class="contact">
+        <img src="./images/logo_irla.jpg" alt="logo" />
+        <section class="tel">
+          <img src="./images/tel_icone.png" alt="tel" />
+          <div class="text">
+            <h4 style="color: orange">Appelez-nous</h4>
+            <span>+224 628 62 78 78</span>
+          </div>
+        </section>
+      </section>
+      <nav>
+        <form action="#">
+          <input
+            type="text"
+            placeholder="Recherchez une information"
+            required
+          />
+          <input
+            style="
+              cursor: pointer;
+              width: fit-content;
+              padding: 5px 10px;
+              border-radius: 3px;
+            "
+            type="submit"
+            class="sub"
+            value="Rechercher"
+          />
+        </form>
+        <ul style="position: relative">
+          <li><a class="lk" href="index.html">Accueil</a></li>
+          <li class="go">
+            <a class="lk" href="actualites.html">Actualités</a>
+          </li>
+          <li style="position: relative">
+            <!-- LISTE DEROULANTE REALISATIONS -->
+            <div style="position: relative">
+              <div class="realisations">
+                <div
+                  style="text-align: center; cursor: default"
+                  class="premier"
+                >
+                  Réalisation
+                  <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+                </div>
+                <div class="elements">
+                  <a href="projets.html">Projets & Perspectives</a>
+                  <a href="productions.html">Production</a>
+                  <a href="actualites.html#evenements">Evénements</a>
+                </div>
+              </div>
+            </div>
+            <!-- lISTE DEROULATE POUR LES LANGUES -->
+          </li>
+          <li><a class="lk" href="apropos.html">A propos</a></li>
+          <li><a class="lk" href="contact.html">Contact</a></li>
+        </ul>
+        <!-- lISTE DEROULATE POUR LES LANGUES -->
+        <div class="clang" style="position: relative">
+          <div class="langues">
+            <div class="selecteur" style="cursor: default">
+              FR <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+            </div>
+            <div class="langs">
+              <a href="#">EN</a>
+              <a href="#">ES</a>
+            </div>
+          </div>
+        </div>
+
+        <label for="toggle"
+          ><i
+            class="fas fa-bars fa-2x"
+            style="
+              color: white;
+              border: 1px solid white;
+              padding: 3px;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          ></i
+        ></label>
+        <input type="checkbox" id="toggle" hidden />
+      </nav>
+    </header>
+    <!-- FIN NAVBAR -->
+
+    <div class="conteneur-page mc">
+      <section class="detail-actualite">
+        <div class="container">
+          <h2>Visite du coordinateur du CELHTO-UA à l’IRLA</h2>
+          <p class="date">Publié le 19 avril 2025</p>
+
+          <img
+            src="./images/actu4-image.jpg"
+            alt="Visite du CELHTO-UA"
+            class="header-img"
+          />
+
+          <p>
+            Le 19 avril 2025, l’Institut de Recherche Linguistique Appliquée
+            (IRLA) a eu l’honneur d’accueillir Monsieur **Alhousseini Taulbo**,
+            coordinateur du **Centre d’Études Linguistiques et Historiques par
+            Tradition Orale (CELHTO)**, organe technique de l’Union africaine
+            basé à Niamey, au Niger. Cette visite s’inscrit dans le cadre de la
+            mission de coopération entre l’Union africaine et les institutions
+            de recherche linguistique du continent.
+          </p>
+
+          <h3>Objectifs de la visite</h3>
+          <p>
+            L’objectif principal de cette visite était de soumettre
+            officiellement un document stratégique du CELHTO-UA concernant la
+            préservation et la valorisation des langues africaines. Ce document,
+            intitulé
+            <strong
+              >« Cadre stratégique panafricain pour la revitalisation des
+              langues africaines »</strong
+            >, présente les grandes lignes de la politique linguistique à
+            adopter pour renforcer les langues nationales dans l’éducation, la
+            recherche et les médias.
+          </p>
+
+          <blockquote>
+            <strong
+              >« La diversité linguistique de l’Afrique est une richesse
+              immense. Elle doit être protégée, étudiée et utilisée dans nos
+              systèmes éducatifs. L’IRLA est un modèle dans ce domaine »</strong
+            >, a déclaré M. Taulbo.
+          </blockquote>
+
+          <h3>Rencontres et échanges avec les équipes de l’IRLA</h3>
+          <p>
+            Après un accueil officiel par le Directeur général de l’IRLA, Dr
+            Mamadou Saliou Diallo, le coordinateur du CELHTO-UA a eu des
+            échanges approfondis avec les chercheurs de l’institut. Les
+            discussions ont porté sur :
+          </p>
+          <ul>
+            <li>
+              Les méthodologies d’enquête linguistique en milieu multilingue
+            </li>
+            <li>La numérisation des archives orales et manuscrites</li>
+            <li>
+              La participation de l’IRLA aux projets continentaux de
+              cartographie linguistique
+            </li>
+          </ul>
+
+          <h3>Remise officielle du document stratégique</h3>
+          <p>
+            Un moment fort de la visite a été la remise officielle du document
+            du CELHTO-UA, en présence du personnel, des enseignants chercheurs,
+            ainsi que des représentants du Ministère de la Culture et de
+            l’Artisanat. Ce document servira de base pour une meilleure
+            intégration des recommandations africaines dans les politiques
+            nationales.
+          </p>
+
+          <h3>Signature d’un protocole de collaboration</h3>
+          <p>
+            À l’issue de la visite, un protocole d’accord a été signé entre
+            l’IRLA et le CELHTO-UA visant à :
+          </p>
+          <ul>
+            <li>
+              Favoriser les échanges de données linguistiques et historiques
+            </li>
+            <li>
+              Mettre en place un programme de formation des chercheurs guinéens
+              au CELHTO
+            </li>
+            <li>
+              Co-organiser des colloques scientifiques annuels sur les langues
+              africaines
+            </li>
+          </ul>
+
+          <h3>Perspectives de coopération</h3>
+          <p>
+            Cette visite marque un tournant dans les relations entre l’IRLA et
+            les institutions africaines partenaires. Le renforcement des liens
+            permettra d’harmoniser les efforts sur le continent en matière de
+            recherche linguistique, et d’inscrire les langues guinéennes dans
+            les initiatives continentales et internationales.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <button class="scrolltop">
+      <i class="fas fa-long-arrow-up fa-lg"></i>
+    </button>
+    <!-- DEBUT DE LA SECTION PIED DE PAGE -->
+    <footer>
+      <section class="footer-top">
+        <section>
+          <img
+            class="logo-footer"
+            src="./images/logo_irla.jpg"
+            alt="logo-irla"
+          />
+          <p></p>
+          <p>
+            L’Institut de Recherche Linguistique Appliquée (IRLA)
+            <span class="no-mobile">
+              œuvre à la valorisation, à la sauvegarde et à la </span
+            >promotion des langues nationales de Guinée à travers la recherche,
+            l’enseignement et la production de ressources pédagogiques.
+          </p>
+        </section>
+        <section class="liens-rapide">
+          <h3>LIENS RAPIDES</h3>
+          <hr />
+          <a href="actualites.html">Nos actualités</a>
+          <a href="actualites.html#evenements">Nos Evénements</a>
+          <a href="projets.html">Nos Projets & perspectives</a>
+          <a href="productions.html">Nos productions</a>
+          <a href="contact.html">Nous écrire</a>
+
+          <div class="sociaux">
+            <a href="https://www.facebook.com/irla.guinee"
+              ><img class="reseaux" src="./images/facebook.png" alt="fb-logo"
+            /></a>
+            <a href="#"
+              ><img class="reseaux" src="./images/x.png" alt="x-logo"
+            /></a>
+            <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+              ><img
+                class="reseaux"
+                src="./images/social-media-logo-design.png"
+                alt="linked-logo"
+            /></a>
+          </div>
+        </section>
+        <section class="contactez-nous">
+          <h3>CONTACTEZ-NOUS</h3>
+          <hr />
+          <p>
+            <i class="fas fa-clock" style="margin-right: 10px"></i>Ouvert de 08h
+            à 16h du Lundi au Vendredi
+          </p>
+          <p>
+            <i class="fas fa-map-marker" style="margin-right: 10px"></i
+            >Téminètaye, C/Kaloum-Conakry
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="mailto:info@irla.gov.gn"
+              ><i class="fas fa-envelope" style="margin-right: 10px"></i
+              >info@irla.gov.gn</a
+            >
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="tel:+224628627878"
+              ><i class="fas fa-phone" style="margin-right: 5px"></i> +224 628
+              62 78 78</a
+            >
+          </p>
+        </section>
+      </section>
+
+      <section class="footer-bottom">
+        <nav>
+          <ul>
+            <li><a class="lk" href="index.html">Accueil</a></li>
+            <li><a class="lk" href="apropos.html">A propos</a></li>
+            <li><a class="lk" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <p style="color: rgb(134, 132, 132)">
+          IRLA &copy; 20025. Tous droits réservés.
+        </p>
+
+        <img class="branding" src="./images/branding.png" alt="logo-guinee" />
+      </section>
+    </footer>
+    <!-- FIN DE LA SECTION PIED DE PAGE -->
+  </body>
+</html>

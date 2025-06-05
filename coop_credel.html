@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page details</title>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+<link rel="stylesheet" href="index.css" />
+    <style>
+      .conteneur-page {
+        padding: 20px 5%;
+      }
+      .noms {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+      }
+      ul {
+        list-style: none;
+      }
+      .imgtop {
+        width: 40%;
+      }
+
+      .detail-actualite .header-img {
+        width: 100%;
+        /* max-height:; */
+        object-position: 0 0;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .detail-actualite .date {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+
+      .detail-actualite blockquote {
+        font-style: italic;
+        padding: 15px 20px;
+        border-left: 5px solid #1b365d;
+        margin: 20px 0;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+      }
+
+      .gallery {
+        display: flex;
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .gallery img {
+        width: 48%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .cta {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-left: 4px solid #1b365d;
+        border-radius: 6px;
+      }
+
+      .cta .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #1b365d;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- DEBUT NAVBAR -->
+    <header>
+      <section class="contact">
+        <img src="./images/logo_irla.jpg" alt="logo" />
+        <section class="tel">
+          <img src="./images/tel_icone.png" alt="tel" />
+          <div class="text">
+            <h4 style="color: orange">Appelez-nous</h4>
+            <span>+224 628 62 78 78</span>
+          </div>
+        </section>
+      </section>
+      <nav>
+        <form action="#">
+          <input
+            type="text"
+            placeholder="Recherchez une information"
+            required
+          />
+          <input
+            style="
+              cursor: pointer;
+              width: fit-content;
+              padding: 5px 10px;
+              border-radius: 3px;
+            "
+            type="submit"
+            class="sub"
+            value="Rechercher"
+          />
+        </form>
+        <ul style="position: relative">
+          <li><a class="lk" href="index.html">Accueil</a></li>
+          <li class="go">
+            <a class="lk" href="actualites.html">Actualités</a>
+          </li>
+          <li style="position: relative">
+            <!-- LISTE DEROULANTE REALISATIONS -->
+            <div style="position: relative">
+              <div class="realisations">
+                <div
+                  style="text-align: center; cursor: default"
+                  class="premier"
+                >
+                  Réalisation
+                  <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+                </div>
+                <div class="elements">
+                  <a href="projets.html">Projets & Perspectives</a>
+                  <a href="productions.html">Production</a>
+                  <a href="actualites.html#evenements">Evénements</a>
+                </div>
+              </div>
+            </div>
+            <!-- lISTE DEROULATE POUR LES LANGUES -->
+          </li>
+          <li><a class="lk" href="apropos.html">A propos</a></li>
+          <li><a class="lk" href="contact.html">Contact</a></li>
+        </ul>
+        <!-- lISTE DEROULATE POUR LES LANGUES -->
+        <div class="clang" style="position: relative">
+          <div class="langues">
+            <div class="selecteur" style="cursor: default">
+              FR <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+            </div>
+            <div class="langs">
+              <a href="#">EN</a>
+              <a href="#">ES</a>
+            </div>
+          </div>
+        </div>
+
+        <label for="toggle"
+          ><i
+            class="fas fa-bars fa-2x"
+            style="
+              color: white;
+              border: 1px solid white;
+              padding: 3px;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          ></i
+        ></label>
+        <input type="checkbox" id="toggle" hidden />
+      </nav>
+    </header>
+    <!-- FIN NAVBAR -->
+    <div class="conteneur-page mc">
+      <section class="detail-actualite">
+        <div class="container">
+          <h2>Coopération entre l’IRLA et le CREDEL</h2>
+          <p class="date">Publié le 30 avril 2025</p>
+
+          <img
+            src="./images/actu3-image.jpg"
+            alt="Coopération IRLA CREDEL"
+            class="header-img"
+          />
+
+          <p>
+            Dans le cadre de sa stratégie de renforcement des partenariats
+            scientifiques et académiques, l’Institut de Recherche Linguistique
+            Appliquée (IRLA) a signé un **accord de coopération
+            interuniversitaire** avec le **Centre de Recherche pour le
+            Développement de l’Éducation en Langue (CREDEL)** basé au Bénin.
+          </p>
+
+          <h3>Objectifs du partenariat</h3>
+          <p>
+            Ce partenariat vise à mutualiser les efforts de recherche dans le
+            domaine de l’éducation multilingue, de la valorisation des langues
+            africaines, ainsi que de la formation d’enseignants en langues
+            locales. L’accord prévoit notamment :
+          </p>
+          <ul>
+            <li>
+              La co-réalisation de projets de recherche appliquée en
+              linguistique et didactique
+            </li>
+            <li>
+              L’organisation de colloques et ateliers de formation entre les
+              deux structures
+            </li>
+            <li>
+              L’échange de chercheurs et d’étudiants entre la Guinée et le Bénin
+            </li>
+            <li>La publication conjointe de travaux scientifiques</li>
+          </ul>
+
+          <h3>Lancement de la Semaine de la Langue Guinéenne</h3>
+          <p>
+            La signature du partenariat a coïncidé avec la **célébration de la
+            Semaine des Langues Guinéennes** organisée par l’IRLA à Conakry du
+            29 avril au 3 mai 2025. Le Directeur général du CREDEL, Dr Jules
+            Komlan AYI, a pris part à la cérémonie d’ouverture.
+          </p>
+          <p>
+            Dans son discours, il a salué les efforts de l’IRLA dans la
+            conservation du patrimoine linguistique guinéen, et a insisté sur la
+            nécessité de créer une plateforme africaine d’enseignement des
+            langues locales à travers des outils numériques et des approches
+            pédagogiques adaptées.
+          </p>
+
+          <h3>Formation des enseignants chercheurs</h3>
+          <p>
+            Dans le cadre du protocole signé, un premier programme de
+            **formation conjointe des enseignants chercheurs** en linguistique
+            appliquée et sociolinguistique sera lancé dès septembre 2025. Cette
+            formation, en format hybride (présentiel et distanciel), permettra :
+          </p>
+          <ul>
+            <li>
+              La montée en compétence des formateurs en langues nationales
+            </li>
+            <li>
+              Le développement de modules communs de didactique linguistique
+            </li>
+            <li>
+              L’intégration de contenus sur la linguistique africaine dans les
+              curricula universitaires
+            </li>
+          </ul>
+
+          <h3>Perspectives et engagements</h3>
+          <p>
+            L’IRLA et le CREDEL ont réaffirmé leur engagement à travailler
+            ensemble pour que les langues africaines retrouvent leur place dans
+            l’éducation, les médias et la recherche. D’autres centres de
+            recherche linguistique seront invités à rejoindre ce partenariat,
+            notamment dans la perspective de la création d’un **réseau
+            panafricain des langues africaines**.
+          </p>
+
+          <blockquote>
+            <strong
+              >« Les langues africaines ne doivent plus être considérées comme
+              de simples outils de communication, mais comme des piliers de
+              développement humain, social et culturel. »</strong
+            ><br />
+            — Dr Fatoumata Diallo, Directrice adjointe de l’IRLA
+          </blockquote>
+        </div>
+      </section>
+    </div>
+
+    <button class="scrolltop">
+      <i class="fas fa-long-arrow-up fa-lg"></i>
+    </button>
+    <!-- DEBUT DE LA SECTION PIED DE PAGE -->
+    <footer>
+      <section class="footer-top">
+        <section>
+          <img
+            class="logo-footer"
+            src="./images/logo_irla.jpg"
+            alt="logo-irla"
+          />
+          <p></p>
+          <p>
+            L’Institut de Recherche Linguistique Appliquée (IRLA)
+            <span class="no-mobile">
+              œuvre à la valorisation, à la sauvegarde et à la </span
+            >promotion des langues nationales de Guinée à travers la recherche,
+            l’enseignement et la production de ressources pédagogiques.
+          </p>
+        </section>
+        <section class="liens-rapide">
+          <h3>LIENS RAPIDES</h3>
+          <hr />
+          <a href="actualites.html">Nos actualités</a>
+          <a href="actualites.html#evenements">Nos Evénements</a>
+          <a href="projets.html">Nos Projets & perspectives</a>
+          <a href="productions.html">Nos productions</a>
+          <a href="contact.html">Nous écrire</a>
+
+          <div class="sociaux">
+            <a href="https://www.facebook.com/irla.guinee"
+              ><img class="reseaux" src="./images/facebook.png" alt="fb-logo"
+            /></a>
+            <a href="#"
+              ><img class="reseaux" src="./images/x.png" alt="x-logo"
+            /></a>
+            <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+              ><img
+                class="reseaux"
+                src="./images/social-media-logo-design.png"
+                alt="linked-logo"
+            /></a>
+          </div>
+        </section>
+        <section class="contactez-nous">
+          <h3>CONTACTEZ-NOUS</h3>
+          <hr />
+          <p>
+            <i class="fas fa-clock" style="margin-right: 10px"></i>Ouvert de 08h
+            à 16h du Lundi au Vendredi
+          </p>
+          <p>
+            <i class="fas fa-map-marker" style="margin-right: 10px"></i
+            >Téminètaye, C/Kaloum-Conakry
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="mailto:info@irla.gov.gn"
+              ><i class="fas fa-envelope" style="margin-right: 10px"></i
+              >info@irla.gov.gn</a
+            >
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="tel:+224628627878"
+              ><i class="fas fa-phone" style="margin-right: 5px"></i> +224 628
+              62 78 78</a
+            >
+          </p>
+        </section>
+      </section>
+
+      <section class="footer-bottom">
+        <nav>
+          <ul>
+            <li><a class="lk" href="index.html">Accueil</a></li>
+            <li><a class="lk" href="apropos.html">A propos</a></li>
+            <li><a class="lk" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <p style="color: rgb(134, 132, 132)">
+          IRLA &copy; 20025. Tous droits réservés.
+        </p>
+
+        <img class="branding" src="./images/branding.png" alt="logo-guinee" />
+      </section>
+    </footer>
+    <!-- FIN DE LA SECTION PIED DE PAGE -->
+  </body>
+</html>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRLA -Concours des écrivains en langues nationales</title>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+<link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="all.min.css" />
+    <style>
+      .conteneur-page {
+        padding: 20px 5%;
+      }
+      .noms {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+      }
+      ul {
+        list-style: none;
+      }
+      .imgtop {
+        width: 40%;
+      }
+
+      .detail-actualite .header-img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .detail-actualite .date {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+
+      .detail-actualite blockquote {
+        font-style: italic;
+        padding: 15px 20px;
+        border-left: 5px solid #1b365d;
+        margin: 20px 0;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+      }
+
+      .gallery {
+        display: flex;
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .gallery img {
+        /* width: 48%; */
+        border-radius: 8px;
+        object-fit: contain;
+      }
+
+      .cta {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-left: 4px solid #1b365d;
+        border-radius: 6px;
+      }
+
+      .cta .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #1b365d;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- DEBUT NAVBAR -->
+    <header>
+      <section class="contact">
+        <img src="./images/logo_irla.jpg" alt="logo" />
+        <section class="tel">
+          <img src="./images/tel_icone.png" alt="tel" />
+          <div class="text">
+            <h4 style="color: orange">Appelez-nous</h4>
+            <span>+224 628 62 78 78</span>
+          </div>
+        </section>
+      </section>
+      <nav>
+        <form action="#">
+          <input
+            type="text"
+            placeholder="Recherchez une information"
+            required
+          />
+          <input
+            style="
+              cursor: pointer;
+              width: fit-content;
+              padding: 5px 10px;
+              border-radius: 3px;
+            "
+            type="submit"
+            class="sub"
+            value="Rechercher"
+          />
+        </form>
+        <ul style="position: relative">
+          <li><a class="lk" href="index.html">Accueil</a></li>
+          <li class="go">
+            <a class="lk" href="actualites.html">Actualités</a>
+          </li>
+          <li style="position: relative">
+            <!-- LISTE DEROULANTE REALISATIONS -->
+            <div style="position: relative">
+              <div class="realisations">
+                <div
+                  style="text-align: center; cursor: default"
+                  class="premier"
+                >
+                  Réalisation
+                  <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+                </div>
+                <div class="elements">
+                  <a href="projets.html">Projets & Perspectives</a>
+                  <a href="productions.html">Production</a>
+                  <a href="actualites.html#evenements">Evénements</a>
+                </div>
+              </div>
+            </div>
+            <!-- lISTE DEROULATE POUR LES LANGUES -->
+          </li>
+          <li><a class="lk" href="apropos.html">A propos</a></li>
+          <li><a class="lk" href="contact.html">Contact</a></li>
+        </ul>
+        <!-- lISTE DEROULATE POUR LES LANGUES -->
+        <div class="clang" style="position: relative">
+          <div class="langues">
+            <div class="selecteur" style="cursor: default">
+              FR <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+            </div>
+            <div class="langs">
+              <a href="#">EN</a>
+              <a href="#">ES</a>
+            </div>
+          </div>
+        </div>
+
+        <label for="toggle"
+          ><i
+            class="fas fa-bars fa-2x"
+            style="
+              color: white;
+              border: 1px solid white;
+              padding: 3px;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          ></i
+        ></label>
+        <input type="checkbox" id="toggle" hidden />
+      </nav>
+    </header>
+    <!-- FIN NAVBAR -->
+
+    <div class="conteneur-page mc">
+      <section class="detail-actualite">
+        <div class="container">
+          <h2>Concours des écrivains en langues nationales</h2>
+          <p class="date">Publié le 14 mai 2025</p>
+
+          <img
+            src="./images/actu1-image.png"
+            alt="Concours écrivains"
+            class="header-img"
+          />
+
+          <p>
+            Dans le cadre de sa mission de promotion et de valorisation des
+            langues nationales, l’<strong
+              >Institut de Recherche Linguistique Appliquée (IRLA)</strong
+            >
+            a lancé le **Concours national des écrivains en langues locales**,
+            une initiative inédite visant à stimuler la création littéraire dans
+            les langues guinéennes. Ce concours a pour ambition de révéler de
+            nouveaux talents, de dynamiser l’écriture multilingue et de créer un
+            espace d’expression pour les auteurs enracinés dans les cultures
+            locales.
+          </p>
+
+          <h3>Objectifs du concours</h3>
+          <ul>
+            <li>
+              Encourager la production littéraire en langues nationales (pular,
+              maninka, soussou, kissi, loma, etc.)
+            </li>
+            <li>
+              Susciter l’intérêt des jeunes écrivains pour la littérature
+              autochtone
+            </li>
+            <li>
+              Créer un répertoire d’œuvres originales pour l'alphabétisation et
+              l'enseignement
+            </li>
+            <li>
+              Défendre la diversité linguistique en Guinée à travers l’art de
+              l’écriture
+            </li>
+          </ul>
+
+          <h3>Thème de l’édition 2025</h3>
+          <p>
+            Le thème retenu pour cette première édition est :
+            <strong
+              >« Les langues de Guinée au service de la paix et de la cohésion
+              sociale »</strong
+            >. Les candidats étaient invités à rédiger une nouvelle, un conte,
+            une pièce de théâtre ou un poème illustrant ce thème dans leur
+            langue maternelle.
+          </p>
+
+          <h3>Participation et modalités</h3>
+          <p>
+            Le concours a réuni plus de 230 participants issus des 8 régions
+            administratives du pays. Chaque œuvre soumise devait respecter une
+            structure narrative claire, être rédigée dans une langue nationale
+            et être accompagnée d’une traduction en français. Les catégories
+            étaient les suivantes :
+          </p>
+          <ul>
+            <li><strong>Nouvelle</strong> (5 à 10 pages)</li>
+            <li><strong>Poésie</strong> (minimum 30 vers)</li>
+            <li><strong>Conte traditionnel réécrit</strong></li>
+          </ul>
+
+          <h3>Jury et critères d’évaluation</h3>
+          <p>
+            Le jury, composé de linguistes, d’écrivains, d’enseignants et de
+            traducteurs, a évalué les textes selon plusieurs critères :
+          </p>
+          <ul>
+            <li>
+              Qualité linguistique et maîtrise de la langue nationale utilisée
+            </li>
+            <li>Originalité et créativité de l’œuvre</li>
+            <li>Respect du thème</li>
+            <li>Structure narrative et fluidité</li>
+          </ul>
+
+          <h3>Cérémonie de remise des prix</h3>
+          <p>
+            La cérémonie de remise des prix s’est tenue à l’Université Général
+            Lansana Conté de Sonfonia, en présence de la ministre de
+            l’Enseignement Supérieur et de la Recherche Scientifique, de
+            plusieurs écrivains guinéens, d’étudiants, et de représentants des
+            maisons d’édition locales.
+          </p>
+
+          <p>
+            Les lauréats ont reçu des <strong>prix en numéraire</strong>, des
+            <strong>lots de livres</strong>, et un
+            <strong>contrat de publication</strong> avec la maison d’édition
+            partenaire de l’IRLA. Les meilleures œuvres feront partie d’une
+            **anthologie bilingue (langue nationale / français)** publiée
+            courant 2025.
+          </p>
+
+          <h3>Perspectives</h3>
+          <p>
+            Fort de son succès, l’IRLA envisage de rendre ce concours annuel,
+            avec une ouverture prochaine à la diaspora guinéenne. L’objectif est
+            de créer un véritable écosystème d’auteurs, d’éditeurs, de
+            traducteurs et de lecteurs pour faire vivre les langues nationales à
+            travers la littérature.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <button class="scrolltop">
+      <i class="fas fa-long-arrow-up fa-lg"></i>
+    </button>
+    <!-- DEBUT DE LA SECTION PIED DE PAGE -->
+    <footer>
+      <section class="footer-top">
+        <section>
+          <img
+            class="logo-footer"
+            src="./images/logo_irla.jpg"
+            alt="logo-irla"
+          />
+          <p></p>
+          <p>
+            L’Institut de Recherche Linguistique Appliquée (IRLA)
+            <span class="no-mobile">
+              œuvre à la valorisation, à la sauvegarde et à la </span
+            >promotion des langues nationales de Guinée à travers la recherche,
+            l’enseignement et la production de ressources pédagogiques.
+          </p>
+        </section>
+        <section class="liens-rapide">
+          <h3>LIENS RAPIDES</h3>
+          <hr />
+          <a href="actualites.html">Nos actualités</a>
+          <a href="actualites.html#evenements">Nos Evénements</a>
+          <a href="projets.html">Nos Projets & perspectives</a>
+          <a href="productions.html">Nos productions</a>
+          <a href="contact.html">Nous écrire</a>
+
+          <div class="sociaux">
+            <a href="https://www.facebook.com/irla.guinee"
+              ><img class="reseaux" src="./images/facebook.png" alt="fb-logo"
+            /></a>
+            <a href="#"
+              ><img class="reseaux" src="./images/x.png" alt="x-logo"
+            /></a>
+            <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+              ><img
+                class="reseaux"
+                src="./images/social-media-logo-design.png"
+                alt="linked-logo"
+            /></a>
+          </div>
+        </section>
+        <section class="contactez-nous">
+          <h3>CONTACTEZ-NOUS</h3>
+          <hr />
+          <p>
+            <i class="fas fa-clock" style="margin-right: 10px"></i>Ouvert de 08h
+            à 16h du Lundi au Vendredi
+          </p>
+          <p>
+            <i class="fas fa-map-marker" style="margin-right: 10px"></i
+            >Téminètaye, C/Kaloum-Conakry
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="mailto:info@irla.gov.gn"
+              ><i class="fas fa-envelope" style="margin-right: 10px"></i
+              >info@irla.gov.gn</a
+            >
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="tel:+224628627878"
+              ><i class="fas fa-phone" style="margin-right: 5px"></i> +224 628
+              62 78 78</a
+            >
+          </p>
+        </section>
+      </section>
+
+      <section class="footer-bottom">
+        <nav>
+          <ul>
+            <li><a class="lk" href="index.html">Accueil</a></li>
+            <li><a class="lk" href="apropos.html">A propos</a></li>
+            <li><a class="lk" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <p style="color: rgb(134, 132, 132)">
+          IRLA &copy; 20025. Tous droits réservés.
+        </p>
+
+        <img class="branding" src="./images/branding.png" alt="logo-guinee" />
+      </section>
+    </footer>
+    <!-- FIN DE LA SECTION PIED DE PAGE -->
+  </body>
+</html>

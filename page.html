@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page details</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .conteneur-page {
+            padding: 20px 5%;
+        }
+        .noms {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+        }
+        ul {
+            list-style: none;
+        }
+        .imgtop {
+            width: 40%;
+        }
+
+        .detail-actualite .header-img {
+  width: 100%;
+  max-height: 450px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.detail-actualite .date {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.detail-actualite blockquote {
+  font-style: italic;
+  padding: 15px 20px;
+  border-left: 5px solid #1b365d;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.gallery {
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.gallery img {
+  width: 48%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.cta {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-left: 4px solid #1b365d;
+  border-radius: 6px;
+}
+
+.cta .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #1b365d;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+
+    </style>
+</head>
+<body>
+<!-- DEBUT NAVBAR -->
+<header>
+  <section class="contact">
+    <img src="./images/logo_irla.jpg" alt="logo" />
+    <section class="tel">
+      <img src="./images/tel_icone.png" alt="tel" />
+      <div class="text">
+        <h4 style="color: orange;">Appelez-nous</h4>
+      <span>+224 628 62 78 78</span>
+      </div>
+      
+    </section>
+  </section>
+  <nav>
+    <form action="#">
+      <input type="text" placeholder="Recherchez une information" required>
+      <input style="cursor: pointer; width: fit-content; padding: 5px 10px; border-radius: 3px;" type="submit" class="sub" value="Rechercher">
+    </form>
+    <ul style="position: relative;">
+      <li><a class="lk" href="index.html">Accueil</a></li>
+      <li class="go">
+          <a class="lk" href="actualites.html">Actualités</a>
+        </li>
+        <li style="position: relative;">
+          <!-- LISTE DEROULANTE REALISATIONS -->
+    <div style="position: relative;">
+      <div class="realisations">
+      <div style="text-align: center; cursor: default;" class="premier">Réalisation <i class="fas fa-chevron-down" style="margin-left: 5px;"></i></div>
+      <div class="elements">
+        <a href="projets.html">Projets & Perspectives</a>
+        <a href="productions.html">Production</a>
+        <a href="actualites.html#evenements">Evénements</a>
+      </div>
+    </div>
+    </div>
+    <!-- lISTE DEROULATE POUR LES LANGUES -->
+        </li>
+      <li><a class="lk" href="apropos.html">A propos</a></li>
+      <li><a class="lk" href="contact.html">Contact</a></li>
+
+    </ul>
+    <!-- lISTE DEROULATE POUR LES LANGUES -->
+    <div class="clang" style="position: relative;">
+      <div class="langues">
+      <div class="selecteur" style="cursor: default;">FR <i class="fas fa-chevron-down" style="margin-left: 5px;"></i></div>
+      <div class="langs">
+        <a href="#">EN</a>
+        <a href="#">ES</a>
+      </div>
+    </div>
+    </div>
+    
+    <label for="toggle"><i class="fas fa-bars fa-2x" style="color: white; border: 1px solid white; padding: 3px; border-radius: 5px; cursor: pointer;"></i></label>
+  <input type="checkbox" id="toggle" hidden>
+  
+  </nav>
+</header>
+<!-- FIN NAVBAR -->
+    <div class="conteneur-page">
+        <section class="actualite-detail">
+            <div class="container">
+              <h2>3ème Édition du Mercredi Scientifique – À l'honneur : la communauté Baga</h2>
+              <img class="imgtop" src="mercredi_scientifique.jpg" alt="images">
+              <p><strong>Date :</strong> Mars 2024 | <strong>Lieu :</strong> Centre Culturel Franco-Guinéen (CCFG)</p>
+              <p>
+                L’Institut de Recherche Linguistique Appliquée (IRLA), en partenariat avec le Centre Culturel Franco-Guinéen, a organisé la troisième édition du <strong>Mercredi Scientifique</strong>. Cette rencontre a mis à l’honneur la <strong>communauté Baga</strong>, représentée par deux figures notables : le doyen <strong>Bouna SANKANTCHI</strong> et <strong>Mohamed Kiponpi BANGOURA</strong>.
+              </p>
+          
+              <h3>Culture et langue Baga : présentation du doyen Bouna</h3>
+              <p>
+                Journaliste à la RTG et spécialiste de la langue Baga, le doyen Bouna a présenté une intervention sur la nomenclature et la culture Baga. Il a déploré l’abandon progressif des traditions par la communauté, affirmant : <em>« On ne peut pas se cacher derrière un brin d’allumette. »</em>
+              </p>
+          
+              <h4>Les dialectes de la langue Baga</h4>
+              <ul>
+                <li><strong>Baga Manduiri</strong> – Archipel de Kanfarande</li>
+                <li><strong>Baga Poukour</strong> – Région de Kamsar (Manar, Botini, Broute)</li>
+                <li><strong>Baga Ourbendou</strong> – Localité de Monçon</li>
+                <li><strong>Baga Kakissa ou de Kaloum</strong> – Kobanet, Conakry, Tabonchou (Dubreka)</li>
+                <li><strong>Baga Stémou</strong> – Zones de Boké et Boffa (les plus nombreux)</li>
+              </ul>
+              <p>
+                Malgré cette diversité, les Baga utilisent généralement le <strong>sosoxui</strong> lorsqu’ils se réunissent.
+              </p>
+          
+              <h4>Origines et traditions Baga</h4>
+              <p>
+                Le doyen a rappelé que les Baga comptent parmi les premiers habitants de la Guinée, en particulier sur le littoral. Il a aussi évoqué la symbolique de la <strong>naissance chez les femmes Baga</strong>, qui repose sur le nombre de grossesses, et la nomination des enfants :
+              </p>
+          
+              <div class="noms">
+                <div class="gar">
+                  <h5>Série Garçons</h5>
+                  <ul>
+                    <li>1er : Tcho Tcho</li>
+                    <li>2ème : Tchon</li>
+                    <li>3ème : Sama</li>
+                    <li>4ème : Baki</li>
+                    <li>5ème : Deka</li>
+                  </ul>
+                </div>
+                <div class="fille">
+                  <h5>Série Filles</h5>
+                  <ul>
+                    <li>1ère : Bonbon</li>
+                    <li>2ème : Tchapi</li>
+                    <li>3ème : Kolon</li>
+                    <li>4ème : Feni</li>
+                    <li>5ème : Nary</li>
+                  </ul>
+                </div>
+              </div>
+          
+              <h4>Le masque sacré Nimba</h4>
+              <p>
+                Le <strong>masque Nimba</strong>, aujourd'hui emblème culturel national, est à l'origine appelé <em>Gnanban</em> (Gnan : sol / Ban : mirador). Il représente une femme allaitante. Au fil du temps, <em>Gnanban</em> est devenu <em>Demba</em>, puis <em>Nimba</em> par mauvaise prononciation. Ce masque est désormais une icône sur les documents officiels de la Guinée.
+              </p>
+          
+              <hr>
+          
+              <h2>2ème Mercredi Scientifique : L’importance des langues maternelles</h2>
+              <p><strong>Date :</strong> 6 mars 2024 | <strong>Thème :</strong> L’importance des langues maternelles dans le développement socio-économique</p>
+              <p><strong>Université invitée :</strong> Université Général Lansana Conté de Sonfonia – Conakry</p>
+          
+              <hr>
+          
+              <h2>Coopération avec les orpailleurs : langue & environnement</h2>
+              <p>
+                L’IRLA collabore avec les orpailleurs guinéens pour préserver les langues locales, encourager leur transcription et promouvoir une sensibilisation à la préservation de l’environnement. Ce partenariat vise l’intégration sociale, le développement durable et la transmission des savoirs.
+              </p>
+          
+              <h4>Cérémonie de remise d’attestations</h4>
+              <img src="./images/remise.jpg" alt="">
+              <p>
+                Une cérémonie officielle a marqué la fin de la formation, récompensant les orpailleurs pour leurs efforts dans la documentation linguistique et la conservation de l’environnement. Cet événement a renforcé les liens entre les communautés locales et les chercheurs de l’IRLA.
+              </p>
+            </div>
+          </section>
+          
+    </div>
+
+    <button class="scrolltop"><i class="fas fa-long-arrow-up fa-lg"></i></button>
+    <!-- DEBUT DE LA SECTION PIED DE PAGE -->
+    <footer>
+      <section class="footer-top">
+        <section>
+          <img class="logo-footer" src="./images/logo_irla.jpg" alt="logo-irla">
+          <p><p>
+            L’Institut de Recherche Linguistique Appliquée (IRLA) <span class="no-mobile"> œuvre à la valorisation, à la sauvegarde et à la </span>promotion des langues nationales de Guinée à travers la recherche, l’enseignement et la production de ressources pédagogiques. 
+          </p>
+          
+          </p>
+      </section>
+      <section class="liens-rapide">
+        <h3>LIENS RAPIDES</h3>
+        <hr>
+        <a href="actualites.html">Nos actualités</a>
+        <a href="actualites.html#evenements">Nos Evénements</a>
+        <a href="projets.html">Nos Projets & perspectives</a>
+        <a href="productions.html">Nos productions</a>
+        <a href="contact.html">Nous écrire</a>
+        
+        <div class="sociaux">
+          <a href="https://www.facebook.com/irla.guinee"><img class="reseaux" src="./images/facebook.png" alt="fb-logo"></a>
+        <a href="#"><img class="reseaux" src="./images/x.png" alt="x-logo"></a>
+        <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"><img class="reseaux" src="./images/social-media-logo-design.png" alt="linked-logo"></a>
+
+        </div>
+      </section>
+      <section class="contactez-nous">
+        <h3>CONTACTEZ-NOUS </h3>
+        <hr>
+        <p><i class="fas fa-clock" style="margin-right: 10px;"></i>Ouvert de 08h à 16h du Lundi au Vendredi</p>
+        <p><i class="fas fa-map-marker" style="margin-right: 10px;"></i>Téminètaye, C/Kaloum-Conakry</p>
+        <p><a style="color: white; text-decoration: none;" href="mailto:info@irla.gov.gn"><i class="fas fa-envelope" style="margin-right: 10px"></i>info@irla.gov.gn</a></p>
+        <p><a style="color: white; text-decoration: none;" href="tel:+224628627878"><i class="fas fa-phone" style="margin-right: 5px"></i> +224 628 62 78 78</a></p>
+      </section>
+      </section>
+
+      <section class="footer-bottom">
+        <nav>
+          <ul>
+            <li><a class="lk" href="index.html">Accueil</a></li>
+            <li><a class="lk" href="apropos.html">A propos</a></li>
+            <li><a class="lk" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <p style="color:rgb(134, 132, 132)">IRLA &copy; 20025. Tous droits réservés.</p>
+
+        <img class="branding" src="./images/branding.png" alt="logo-guinee">
+      </section>
+      
+    </footer>
+    <!-- FIN DE LA SECTION PIED DE PAGE -->
+</body>
+</html>

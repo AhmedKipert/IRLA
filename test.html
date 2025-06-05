@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test</title>
+    <style>
+      body {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .statistiques {
+        width: 100%;
+        background-color: navy;
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .statistiques div img {
+        width: 100%;
+      }
+      .statistiques div:nth-child(2),
+      .statistiques div:nth-child(3) {
+        margin-top: 50px;
+      }
+      .statistiques div .stat {
+        position: absolute;
+        top: 38%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        /* border: 2px solid; */
+        color: rgb(233, 229, 229);
+        font-size: 1.2rem;
+      }
+      .statistiques div {
+        border: 2px solid red;
+        /* border-radius: 50%; */
+        position: relative;
+        text-align: center;
+        /* border: 2px solid red; */
+      }
+      .statistiques .stat-desc {
+        color: white;
+        font-size: 1.1rem;
+      }
+      img {
+        border: 2px solid green;
+      }
+      .stats {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 30px;
+      }
+
+      @media screen and (max-width: 769px) {
+        .statistiques {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+        .statistiques div {
+          margin: 0 !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="stats">
+        <h1>IRLA C'est aujourd'hui</h1>
+        <section class="statistiques">
+          <div class="div">
+            <div class="top">
+              <img src="./images/logo_ble2.png" alt="stats" />
+              <p class="stat">24 <br />Langues documentées</p>
+            </div>
+            <p class="stat-desc">Langues nationales analysées et répertoriées</p>
+          </div>
+          <div class="div">
+            <div class="top">
+                <img src="./images/logo_ble2.png" alt="stats" />
+            <p class="stat">38+ <br />Projets de recherche</p>
+            </div>
+            
+            <p class="stat-desc">Etudes et publication menées depuis 10 ans</p>
+          </div>
+          <div class="div">
+            <div class="top">
+                <img src="./images/logo_ble2.png" alt="stats" />
+            <p class="stat">15 <br />Collaborations académiques</p>
+            </div>
+            
+            <p class="stat-desc">Partenariats nationnaux et internationaux</p>
+          </div>
+          <div class="div">
+            <div class="top">
+                <img src="./images/logo_ble2.png" alt="stats" />
+            <p class="stat">120+ <br />Supports pédagogique</p>
+            </div>
+            
+            <p class="stat-desc">Livres, manuels, dictionnaires produits</p>
+          </div>
+        </section>
+    </section>
+  </body>
+</html>

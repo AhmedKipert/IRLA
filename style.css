@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.contact-container .contact {
+    width: 100%;
+    height: auto;
+    display: flex;
+    gap: 15px; 
+    padding: 10px 5%;
+}
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ .contact-header {
+    /* border:2px solid red; */
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/femme-d-affaires-ayant-une-reunion-en-ligne.jpg);
+}
+.contact-header .black {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    opacity: 0.5;
+}
+.contact-header h1 {
+    color:rgb(245, 239, 239);
+    /* border: 2px solid red; */
+    /* position: absolute; */
+    text-align: center;
+    z-index: 2;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+}
+
+.contact-container {
+  padding-bottom: 20px;
+}
+.contact-container .contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+.localisation {
+  flex: 1;
+}
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    position: relative;
+}
+form div::before {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: #424A95;
+    position: absolute;
+    bottom: 0;
+    transition: all 0.3s ease;
+    
+}
+form div:focus-within::before {
+    bactkground: goldenrod;
+    width: 100%;
+}
+form h1 {
+    text-align: center;
+}
+form div input {
+    height: 30px;
+    border: none;
+    border-bottom: 2px solid #e3923d;
+    outline: none;
+    padding: 5px 0;
+}
+form textarea {
+    border: none;
+    border-bottom: 2px solid #e3923d;
+    outline: none;
+    padding: 5px;
+    background: #F4F4F4;
+}
+
+form #fbtn {
+    background: #e3923d;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.125rem;
+    letter-spacing: 2px;
+    color: white;
+}
+form #fbtn:hover {
+  background-color: #c26d3b;
+}
+.b-message {
+    gap: 10px
+}
+
+textarea {
+    line-height: 1.5rem;
+}
+
+
+@media (max-width:769px) {
+  .contact-container .contact {
+    flex-direction: column-reverse;
+    /* grid-template-columns: 1fr !important; */
+
+  }
+}

@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IRLA -Visite du MESRSI</title>
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+<link rel="stylesheet" href="index.css" />
+    <style>
+      .conteneur-page {
+        padding: 20px 5%;
+      }
+      .noms {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+      }
+      ul {
+        list-style: none;
+      }
+      .imgtop {
+        width: 40%;
+      }
+
+      .detail-actualite .header-img {
+        width: 100%;
+        max-height: 80vh;
+        object-position: 0 0;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 20px 0;
+      }
+
+      .detail-actualite .date {
+        color: #888;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+      }
+
+      .detail-actualite blockquote {
+        font-style: italic;
+        padding: 15px 20px;
+        border-left: 5px solid #1b365d;
+        margin: 20px 0;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+      }
+
+      .gallery {
+        display: flex;
+        gap: 20px;
+        margin: 30px 0;
+      }
+
+      .gallery img {
+        width: 48%;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .cta {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-left: 4px solid #1b365d;
+        border-radius: 6px;
+      }
+
+      .cta .btn {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #1b365d;
+        color: white;
+        border-radius: 4px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- DEBUT NAVBAR -->
+    <header>
+      <section class="contact">
+        <img src="./images/logo_irla.jpg" alt="logo" />
+        <section class="tel">
+          <img src="./images/tel_icone.png" alt="tel" />
+          <div class="text">
+            <h4 style="color: orange">Appelez-nous</h4>
+            <span>+224 628 62 78 78</span>
+          </div>
+        </section>
+      </section>
+      <nav>
+        <form action="#">
+          <input
+            type="text"
+            placeholder="Recherchez une information"
+            required
+          />
+          <input
+            style="
+              cursor: pointer;
+              width: fit-content;
+              padding: 5px 10px;
+              border-radius: 3px;
+            "
+            type="submit"
+            class="sub"
+            value="Rechercher"
+          />
+        </form>
+        <ul style="position: relative">
+          <li><a class="lk" href="index.html">Accueil</a></li>
+          <li class="go">
+            <a class="lk" href="actualites.html">Actualités</a>
+          </li>
+          <li style="position: relative">
+            <!-- LISTE DEROULANTE REALISATIONS -->
+            <div style="position: relative">
+              <div class="realisations">
+                <div
+                  style="text-align: center; cursor: default"
+                  class="premier"
+                >
+                  Réalisation
+                  <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+                </div>
+                <div class="elements">
+                  <a href="projets.html">Projets & Perspectives</a>
+                  <a href="productions.html">Production</a>
+                  <a href="actualites.html#evenements">Evénements</a>
+                </div>
+              </div>
+            </div>
+            <!-- lISTE DEROULATE POUR LES LANGUES -->
+          </li>
+          <li><a class="lk" href="apropos.html">A propos</a></li>
+          <li><a class="lk" href="contact.html">Contact</a></li>
+        </ul>
+        <!-- lISTE DEROULATE POUR LES LANGUES -->
+        <div class="clang" style="position: relative">
+          <div class="langues">
+            <div class="selecteur" style="cursor: default">
+              FR <i class="fas fa-chevron-down" style="margin-left: 5px"></i>
+            </div>
+            <div class="langs">
+              <a href="#">EN</a>
+              <a href="#">ES</a>
+            </div>
+          </div>
+        </div>
+
+        <label for="toggle"
+          ><i
+            class="fas fa-bars fa-2x"
+            style="
+              color: white;
+              border: 1px solid white;
+              padding: 3px;
+              border-radius: 5px;
+              cursor: pointer;
+            "
+          ></i
+        ></label>
+        <input type="checkbox" id="toggle" hidden />
+      </nav>
+    </header>
+    <!-- FIN NAVBAR -->
+    <div class="conteneur-page mc">
+      <section class="detail-actualite">
+        <div class="container">
+          <h2>
+            Visite de la Ministre du MESRSI à la Semaine des Langues Guinéennes
+          </h2>
+          <p class="date">Publié le 04 avril 2025</p>
+
+          <img
+            src="./images/actu5-image.jpg"
+            alt="Visite de la ministre Dre Diaka KABA"
+            class="header-img"
+          />
+
+          <p>
+            Le vendredi 04 avril 2025, à l’occasion du 52<sup>e</sup>
+            anniversaire de l’Institut de Recherche Linguistique Appliquée
+            (IRLA), l’institution a eu l’honneur d’accueillir Madame Dre Diaka
+            KABA, Ministre de l’Enseignement Supérieur, de la Recherche
+            Scientifique et de l’Innovation (MESRSI), lors de la Semaine des
+            Langues Guinéennes. Cet événement annuel, organisé par l’IRLA, met
+            en valeur la richesse linguistique du pays et célèbre les efforts de
+            recherche appliquée en matière de linguistique et d’alphabétisation.
+          </p>
+
+          <h3>Un hommage aux langues nationales</h3>
+          <p>
+            Lors de sa visite, la ministre a assisté à plusieurs panels et
+            expositions mettant en avant les huit principales langues guinéennes
+            :
+            <strong
+              >pular, maninkakan, soso, kissi, koniaka, loma, kpèlè,
+              bassari</strong
+            >. Elle a souligné l’importance de protéger ces langues, vecteurs de
+            culture, d’identité et d’intégration sociale.
+          </p>
+          <blockquote>
+            <strong
+              >« Une langue qu’on ne parle plus est une culture qui s’éteint.
+              Nos langues doivent vivre à l’école, dans les médias, sur le
+              marché et dans nos laboratoires »,</strong
+            >
+            a déclaré Mme la Ministre.
+          </blockquote>
+
+          <h3>Un appui à la recherche scientifique et linguistique</h3>
+          <p>
+            Dre Diaka KABA a félicité les chercheurs de l’IRLA pour leur
+            engagement constant en faveur de la transcription, la documentation
+            et la numérisation des langues guinéennes. Elle a également visité
+            le laboratoire phonétique, récemment rénové, et a salué l’initiative
+            de l’<strong>Atlas sociolinguistique de Guinée</strong> en cours de
+            réalisation.
+          </p>
+          <p>
+            Une attention particulière a été portée aux projets d’intégration
+            des langues nationales dans le système éducatif, à travers les
+            technologies numériques et les approches pédagogiques innovantes
+            développées par l’institut.
+          </p>
+
+          <h3>Des moments forts de la journée</h3>
+          <ul>
+            <li>Visite guidée de l’exposition linguistique « Mots et Voix »</li>
+            <li>
+              Atelier interactif avec des élèves en apprentissage du maninkakan
+            </li>
+            <li>
+              Remise de certificats aux formateurs en alphabétisation bilingue
+            </li>
+            <li>
+              Projection de courts-métrages en langues locales sous-titrés
+            </li>
+          </ul>
+
+          <h3>Déclaration conjointe IRLA - MESRSI</h3>
+          <p>
+            À la fin de la visite, une déclaration commune a été signée pour
+            renforcer la collaboration entre le ministère et l’IRLA. Elle
+            prévoit :
+          </p>
+          <ul>
+            <li>
+              Le financement de programmes de recherche linguistique appliquée
+            </li>
+            <li>La création d’un portail numérique des langues nationales</li>
+            <li>
+              L’intégration des langues locales dans les cursus universitaires
+            </li>
+          </ul>
+
+          <h3>Conclusion</h3>
+          <p>
+            La présence de la Ministre à cet événement constitue un signal fort
+            de l’importance accordée aux langues guinéennes dans le
+            développement de la recherche scientifique et dans la politique
+            éducative nationale. L’IRLA continue ainsi de s’imposer comme un
+            acteur central dans la valorisation du patrimoine linguistique de la
+            Guinée.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <button class="scrolltop">
+      <i class="fas fa-long-arrow-up fa-lg"></i>
+    </button>
+    <!-- DEBUT DE LA SECTION PIED DE PAGE -->
+    <footer>
+      <section class="footer-top">
+        <section>
+          <img
+            class="logo-footer"
+            src="./images/logo_irla.jpg"
+            alt="logo-irla"
+          />
+          <p></p>
+          <p>
+            L’Institut de Recherche Linguistique Appliquée (IRLA)
+            <span class="no-mobile">
+              œuvre à la valorisation, à la sauvegarde et à la </span
+            >promotion des langues nationales de Guinée à travers la recherche,
+            l’enseignement et la production de ressources pédagogiques.
+          </p>
+        </section>
+        <section class="liens-rapide">
+          <h3>LIENS RAPIDES</h3>
+          <hr />
+          <a href="actualites.html">Nos actualités</a>
+          <a href="actualites.html#evenements">Nos Evénements</a>
+          <a href="projets.html">Nos Projets & perspectives</a>
+          <a href="productions.html">Nos productions</a>
+          <a href="contact.html">Nous écrire</a>
+
+          <div class="sociaux">
+            <a href="https://www.facebook.com/irla.guinee"
+              ><img class="reseaux" src="./images/facebook.png" alt="fb-logo"
+            /></a>
+            <a href="#"
+              ><img class="reseaux" src="./images/x.png" alt="x-logo"
+            /></a>
+            <a href="https://www.linkedin.com/in/irla-guinee-ba436b24a"
+              ><img
+                class="reseaux"
+                src="./images/social-media-logo-design.png"
+                alt="linked-logo"
+            /></a>
+          </div>
+        </section>
+        <section class="contactez-nous">
+          <h3>CONTACTEZ-NOUS</h3>
+          <hr />
+          <p>
+            <i class="fas fa-clock" style="margin-right: 10px"></i>Ouvert de 08h
+            à 16h du Lundi au Vendredi
+          </p>
+          <p>
+            <i class="fas fa-map-marker" style="margin-right: 10px"></i
+            >Téminètaye, C/Kaloum-Conakry
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="mailto:info@irla.gov.gn"
+              ><i class="fas fa-envelope" style="margin-right: 10px"></i
+              >info@irla.gov.gn</a
+            >
+          </p>
+          <p>
+            <a
+              style="color: white; text-decoration: none"
+              href="tel:+224628627878"
+              ><i class="fas fa-phone" style="margin-right: 5px"></i> +224 628
+              62 78 78</a
+            >
+          </p>
+        </section>
+      </section>
+
+      <section class="footer-bottom">
+        <nav>
+          <ul>
+            <li><a class="lk" href="index.html">Accueil</a></li>
+            <li><a class="lk" href="apropos.html">A propos</a></li>
+            <li><a class="lk" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <p style="color: rgb(134, 132, 132)">
+          IRLA &copy; 20025. Tous droits réservés.
+        </p>
+
+        <img class="branding" src="./images/branding.png" alt="logo-guinee" />
+      </section>
+    </footer>
+    <!-- FIN DE LA SECTION PIED DE PAGE -->
+  </body>
+</html>
