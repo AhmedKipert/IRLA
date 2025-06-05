@@ -40,14 +40,8 @@
 }
 .contact-header h1 {
     color:rgb(245, 239, 239);
-    /* border: 2px solid red; */
-    /* position: absolute; */
     text-align: center;
     z-index: 2;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
-
 }
 
 .contact-container {
@@ -121,11 +115,15 @@ textarea {
     line-height: 1.5rem;
 }
 
+iframe {
+    width: 100%;
+}
 
 @media (max-width:769px) {
   .contact-container .contact {
     flex-direction: column-reverse;
-    /* grid-template-columns: 1fr !important; */
-
+  }
+  .contact {
+    padding: 0 !important;
   }
 }
