@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IRLA -A propos</title>
     <link rel="stylesheet" href="./css/all.min.css" />
-    <link rel="icon" type="image/jpg" href="favicon.jpg">
-<link rel="stylesheet" href="./css/index.css" />
+    <link rel="icon" type="image/jpg" href="favicon.jpg" />
+    <link rel="stylesheet" href="./css/index.css" />
 
     <style>
       .head {
@@ -90,107 +90,6 @@
         justify-content: center;
         text-align: center;
         gap: 30px;
-      }
-
-      @media screen and (max-width: 769px) {
-        .statistiques {
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 1fr 1fr;
-        }
-
-        .statistiques div {
-          margin: 0 !important;
-        }
-        .statistiques {
-          grid-template-columns: 1fr !important;
-        }
-
-        .services .scards {
-          grid-template-columns: 1fr !important;
-        }
-        .mots {
-          grid-template-columns: 1fr !important;
-          align-items: center;
-          justify-content: center;
-        }
-        .nos-valeurs .cards {
-          grid-template-columns: 1fr !important;
-        }
-
-        .card {
-          border: 2px;
-        }
-
-        .transition-cards,
-        .cards {
-          grid-template-columns: 1fr !important;
-        }
-
-        .histoire {
-          grid-template-columns: 1fr !important;
-        }
-        .histoire .hg {
-          display: none;
-        }
-
-        .gallerie .photos {
-          grid-template-columns: 1fr 1fr !important;
-        }
-      }
-
-      @media (min-width: 700px) and (max-width: 1024px) {
-        .statistiques .card {
-          margin: 0 !important;
-        }
-        .statistiques,
-        .transition-cards,
-        .nos-valeurs .cards,
-        .vision-strategie {
-          grid-template-columns: 1fr 1fr !important;
-        }
-        .services .scards,
-        .nos-equipe .cards {
-          grid-template-columns: 1fr 1fr !important;
-          grid-template-rows: 1fr 1fr 1fr;
-        }
-
-        .directeur .mots,
-        .histoire {
-          grid-template-columns: 1fr !important;
-        }
-        .histoire .hg {
-          display: none;
-        }
-
-        .photos {
-          grid-template-columns: 1fr 1fr !important;
-        }
-
-        /* RESPONSIVE PIED DE PAGE -FOOTER- */
-        .footer-bottom {
-          flex-direction: column;
-        }
-        footer .footer-top {
-          grid-template-columns: 1fr 1fr !important;
-          grid-template-rows: 1fr 0fr;
-        }
-        .footer-top .contactez-nous {
-          grid-column: span 2;
-        }
-        .footer-bottom {
-          grid-template-columns: 1fr !important;
-          grid-template-rows: 1fr 1fr;
-        }
-        .footer-bottom nav {
-          grid-column: span 2;
-        }
-        .footer-bottom img {
-          margin-left: auto;
-        }
-        footer .no-mobile {
-          display: none;
-        }
-        /* FIN RESPONSIVE PIED DE PAGE -FOOTER- */
       }
 
       .btns {
@@ -316,6 +215,9 @@
         gap: 10px;
         justify-content: center;
         text-align: center;
+        animation: animeheight ease-out forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
       }
 
       .element img {
@@ -328,12 +230,10 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
-        /* border: 5px solid red; */
       }
       .nos-equipe .cards .card {
         display: flex;
         text-align: center;
-        /* border: 5px solid red; */
       }
 
       .gallerie .photos {
@@ -374,6 +274,118 @@
       .transition i {
         color: #1b365d;
       }
+
+      @media screen and (max-width: 769px) {
+        .statistiques {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+
+        .statistiques div {
+          margin: 0 !important;
+        }
+        .statistiques {
+          grid-template-columns: 1fr !important;
+        }
+
+        .services .scards {
+          grid-template-columns: 1fr !important;
+        }
+        .mots {
+          grid-template-columns: 1fr !important;
+          align-items: center;
+          justify-content: center;
+        }
+        .nos-valeurs .cards {
+          grid-template-columns: 1fr !important;
+        }
+
+        .card {
+          border: 2px;
+        }
+
+        .transition-cards,
+        .cards {
+          grid-template-columns: 1fr !important;
+        }
+
+        .histoire {
+          grid-template-columns: 1fr !important;
+        }
+        .histoire .hg {
+          display: none;
+        }
+
+        .gallerie .photos {
+          grid-template-columns: 1fr 1fr !important;
+        }
+      }
+
+      @media (min-width: 700px) and (max-width: 1024px) {
+        .statistiques .card {
+          margin: 0 !important;
+        }
+        .statistiques,
+        .transition-cards,
+        .nos-valeurs .cards,
+        .vision-strategie {
+          grid-template-columns: 1fr 1fr !important;
+        }
+        .services .scards,
+        .nos-equipe .cards {
+          grid-template-columns: 1fr 1fr !important;
+          grid-template-rows: 1fr 1fr 1fr;
+        }
+
+        .directeur .mots,
+        .histoire {
+          grid-template-columns: 1fr !important;
+        }
+        .histoire .hg {
+          display: none;
+        }
+
+        .photos {
+          grid-template-columns: 1fr 1fr !important;
+        }
+
+        /* RESPONSIVE PIED DE PAGE -FOOTER- */
+        .footer-bottom {
+          flex-direction: column;
+        }
+        footer .footer-top {
+          grid-template-columns: 1fr 1fr !important;
+          grid-template-rows: 1fr 0fr;
+        }
+        .footer-top .contactez-nous {
+          grid-column: span 2;
+        }
+        .footer-bottom {
+          grid-template-columns: 1fr !important;
+          grid-template-rows: 1fr 1fr;
+        }
+        .footer-bottom nav {
+          grid-column: span 2;
+        }
+        .footer-bottom img {
+          margin-left: auto;
+        }
+        footer .no-mobile {
+          display: none;
+        }
+        /* FIN RESPONSIVE PIED DE PAGE -FOOTER- */
+      }
+
+      @keyframes animeWidth {
+        from {
+          opacity: 0;
+          width: 0px;
+        }
+        to {
+          opacity: 1;
+          width: 100%;
+        }
+      }
     </style>
   </head>
 
@@ -386,7 +398,13 @@
           <img src="./images/tel_icone.png" alt="tel" />
           <div class="text">
             <h4 style="color: orange">Appelez-nous</h4>
-            <span><a style="color:black; text-decoration: none;" href="tel:+224 628 62 78 78">+224 628 62 78 78</a></span>
+            <span
+              ><a
+                style="color: black; text-decoration: none"
+                href="tel:+224 628 62 78 78"
+                >+224 628 62 78 78</a
+              ></span
+            >
           </div>
         </section>
       </section>

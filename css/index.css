@@ -1,13 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 body {
   width: 100%;
   height: auto;
   line-height: 1.5;
+  font-family: "Poppins", sans-serif !important;
 }
 
 body h1 {
@@ -273,7 +275,9 @@ header nav form input {
   text-align: center;
   display: flex;
   flex-direction: column;
-  /* gap: 5px; */
+  animation: animeX ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 .mission-cards {
   width: 100%;
@@ -288,6 +292,9 @@ header nav form input {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  animation: animeheight ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 .mission-cards .elm i {
   color: #1b365d;
@@ -341,6 +348,9 @@ header nav form input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: animeX ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 .actualites .actualites-header h2,
 .evenements-header h2 {
@@ -374,6 +384,9 @@ header nav form input {
   gap: 10px;
   padding-bottom: 5px;
   background-color: #fafaf4;
+  animation: animeheight ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 .actualites .cards .card:hover {
   transform: scale(1.0052);
@@ -638,16 +651,20 @@ header nav form input {
   }
 }
 
-@media (min-width: 700px) and (max-width: 1024px) {
+@media screen and (min-width: 640px) and (max-width: 1024px) {
   .mission-cards,
   .actualites .cards {
-    grid-template-columns: 1fr 1fr !important;
+    grid-template-columns: 1fr 1fr;
   }
   .evenements-cards {
     grid-template-columns: 1fr;
   }
   .mw {
     width: 100% !important;
+  }
+
+  .main {
+    padding: 10px;
   }
 
   header nav ul,
@@ -671,7 +688,54 @@ header nav form input {
   }
 }
 
-@media (min-width: 1024px) {
+@keyframes animeheight {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+@keyframes animeX {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes animeLanding {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes animeLandingSec {
+  from {
+    opacity: 0;
+    scale: 0.3;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+/* @media screen and (min-width: 1025px) {
+  .mission {
+    border: 5px solid red !important;
+  }
+} */
+
+@media screen and (min-width: 1025px) {
   body h1 {
     font-size: 2.5rem;
   }
@@ -681,6 +745,14 @@ header nav form input {
 
   summary {
     font-size: 1.25rem;
+  }
+
+  .mission-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .actualites .cards {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

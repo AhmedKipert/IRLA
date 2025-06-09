@@ -73,7 +73,6 @@ form div::before {
     
 }
 form div:focus-within::before {
-    bactkground: goldenrod;
     width: 100%;
 }
 form h1 {
