@@ -68,8 +68,6 @@ nav ul .lk {
   color: #ffffff;
   position: relative;
   padding: 5px 0;
-
-  /* font-size: 1.2rem; */
 }
 nav ul .lk::before {
   content: "";
@@ -84,7 +82,6 @@ nav ul .lk::before {
 }
 nav ul .lk:hover::before {
   width: 100%;
-  /* border-bottom: 1px solid;d */
 }
 header .contact {
   width: 100%;
@@ -101,8 +98,6 @@ header .contact .tel {
 }
 
 header nav form {
-  /* margin-right: auto; */
-  /* border: 2px solid red; */
   display: flex;
   align-items: center;
   gap: 10px;
@@ -119,7 +114,6 @@ header nav form input {
   border: none;
   outline: none;
   padding: 0 10px;
-  /* border: 2px solid red */
 }
 
 /* header  réalisations et langues */
@@ -152,10 +146,7 @@ header nav form input {
   flex-direction: column;
 }
 .realisations {
-  /* right: ; */
   width: 100%;
-  /* padding: 0 10px; */
-  /* border: 2px solid red; */
   top: 0;
 }
 .realisations:hover {
@@ -204,7 +195,7 @@ header nav form input {
 }
 .intro .carousel {
   z-index: 2;
-  width: 80%;
+  width: 90%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -214,14 +205,12 @@ header nav form input {
 }
 .carousel h1 {
   font-size: 2rem;
-  /* padding: 1rem; */
 }
 .carousel h2 {
   font-size: 1.6rem;
 }
 .carousel p {
   font-size: 1.2rem;
-  /* padding: 1rem; */
 }
 
 .intro .action {
@@ -238,17 +227,17 @@ header nav form input {
   background-color: #c26d3b;
 }
 .intro .fleches {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: no-drop;
 }
 .intro .fg {
-  left: 5%;
+  left: 2.5%;
 }
 .intro .fd {
-  right: 5%;
+  right: 2.5%;
 }
 
 /* DEBUT CONTENEUR PRINCIPAL */
@@ -268,23 +257,20 @@ header nav form input {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
-  background-color: #ececec;
+  background-color: #f3f3f3;
   padding: 20px;
 }
 .mission-head {
   text-align: center;
   display: flex;
   flex-direction: column;
-  animation: animeX ease-out forwards;
-  animation-timeline: view();
-  animation-range: entry 0% cover 40%;
 }
 .mission-cards {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: 1fr;
-  gap: 10px;
+  gap: 20px;
 }
 .mission-cards .elm {
   width: 100%;
@@ -293,6 +279,13 @@ header nav form input {
   flex-direction: column;
   gap: 10px;
   animation: animeheight ease-out forwards;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+/* depuis la page apropos: raison spécifique */
+.statistiques .card {
+  animation: animeX ease-out;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
 }
@@ -305,7 +298,6 @@ header nav form input {
 /* FIN SECTION MISSION */
 
 .btns {
-  /* border:2px solid red; */
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -474,6 +466,9 @@ header nav form input {
   border-bottom-right-radius: 5px;
 
   z-index: 5;
+  animation: scardtwidth ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 .services .scards .scard .text p {
   padding: 0px;
@@ -509,7 +504,7 @@ header nav form input {
   margin-top: auto;
 }
 .vision-strategie .droite {
-  background-color: #ececec;
+  background-color: #f3f3f3;
   padding: 20px 10px;
 }
 .vision-strategie .droite ul {
@@ -522,7 +517,6 @@ header nav form input {
 
 /* DEBUT SECTION FAITS ET QUESTIONS */
 .questions {
-  /* border: 2px solid green; */
   padding: 0 10px;
 }
 .questions .questions-liste {
@@ -537,12 +531,16 @@ header nav form input {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  /* font-size: 1.2rem; */
 }
 .questions-liste details summary {
-  background-color: #ececec;
+  background-color: #f3f3f3;
   padding: 10px;
   list-style: none;
+}
+details {
+  animation: animeWidth ease-out;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 .questions-liste details p {
   margin: 10px 0;
@@ -688,6 +686,38 @@ header nav form input {
   }
 }
 
+@media screen and (min-width: 1025px) {
+  body h1 {
+    font-size: 2.5rem;
+  }
+  body p {
+    font-size: 1.2rem;
+  }
+
+  summary {
+    font-size: 1.25rem;
+  }
+
+  .mission-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .actualites .cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@keyframes scardtwidth {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 @keyframes animeheight {
   from {
     opacity: 0;
@@ -726,33 +756,6 @@ header nav form input {
   to {
     opacity: 1;
     scale: 1;
-  }
-}
-
-/* @media screen and (min-width: 1025px) {
-  .mission {
-    border: 5px solid red !important;
-  }
-} */
-
-@media screen and (min-width: 1025px) {
-  body h1 {
-    font-size: 2.5rem;
-  }
-  body p {
-    font-size: 1.2rem;
-  }
-
-  summary {
-    font-size: 1.25rem;
-  }
-
-  .mission-cards {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .actualites .cards {
-    grid-template-columns: repeat(4, 1fr);
   }
 }
 

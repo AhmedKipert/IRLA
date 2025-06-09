@@ -49,11 +49,15 @@
 
       .statistiques {
         width: 100%;
-        /* background-color: navy; */
         display: grid;
         gap: 30px;
 
         grid-template-columns: repeat(4, 1fr);
+      }
+      .statistiques .card {
+        animation: animeX ease-out;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
       }
 
       .statistiques div img {
@@ -123,7 +127,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-        background-color: rgb(236, 232, 232);
+        background-color: #f3f3f3;
         gap: 20px;
       }
 
@@ -175,7 +179,6 @@
         grid-template-columns: 1fr 2fr;
         grid-template-rows: 1fr;
         line-height: 1.5rem;
-        /* border: 2px solid lime; */
         gap: 20px;
         justify-content: center;
         line-height: 1.5rem;
@@ -199,7 +202,8 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         justify-content: center;
-        background-color: #ececec;
+        background-color: #f3f3f3;
+        gap: 20px;
         padding: 10px;
       }
 
@@ -209,21 +213,25 @@
         justify-content: center;
         align-items: center;
       }
-      .element {
+      .element,
+      .nos-equipe {
         display: flex;
         flex-direction: column;
         gap: 10px;
         justify-content: center;
         text-align: center;
-        animation: animeheight ease-out forwards;
-        animation-timeline: view();
-        animation-range: entry 0% cover 40%;
       }
 
       .element img {
         width: 50px;
         margin: 0 auto;
         display: block;
+      }
+
+      .element {
+        animation: animeX ease-out;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
       }
 
       .nos-equipe .cards {
@@ -234,6 +242,9 @@
       .nos-equipe .cards .card {
         display: flex;
         text-align: center;
+        animation: animeheight ease-out;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
       }
 
       .gallerie .photos {
@@ -319,6 +330,10 @@
         .gallerie .photos {
           grid-template-columns: 1fr 1fr !important;
         }
+
+        .statistiques {
+          padding: 0 15%;
+        }
       }
 
       @media (min-width: 700px) and (max-width: 1024px) {
@@ -335,6 +350,7 @@
         .nos-equipe .cards {
           grid-template-columns: 1fr 1fr !important;
           grid-template-rows: 1fr 1fr 1fr;
+          padding: 20px;
         }
 
         .directeur .mots,
@@ -347,6 +363,10 @@
 
         .photos {
           grid-template-columns: 1fr 1fr !important;
+        }
+
+        .statistiques {
+          padding: 0 10%;
         }
 
         /* RESPONSIVE PIED DE PAGE -FOOTER- */
@@ -376,6 +396,22 @@
         /* FIN RESPONSIVE PIED DE PAGE -FOOTER- */
       }
 
+      @media (min-width: 1025px) {
+        .scards {
+          padding: 20px;
+        }
+      }
+
+      @keyframes animeWidth {
+        from {
+          opacity: 0;
+          width: 0px;
+        }
+        to {
+          opacity: 1;
+          width: 100%;
+        }
+      }
       @keyframes animeWidth {
         from {
           opacity: 0;
