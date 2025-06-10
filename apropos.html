@@ -11,13 +11,15 @@
     <style>
       .head {
         width: 100%;
-        height: 40vh;
+        height: 30vh;
         background-image: url(./images/nous.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        flex-direction: column;
+        background-color: #1b365d;
         display: flex;
+        flex-direction: column;
+
         padding: 20px;
         justify-content: center;
         align-items: center;
@@ -27,10 +29,11 @@
       .head .text {
         text-align: center;
         color: white;
-        padding: 20px;
         z-index: 10;
         line-height: 1.5rem;
-        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
       }
 
       .left2 #profil {
@@ -229,7 +232,7 @@
       }
 
       .element {
-        animation: animeX ease-out;
+        animation: animeWidth ease-out;
         animation-timeline: view();
         animation-range: entry 0% cover 40%;
       }
@@ -525,19 +528,18 @@
     <section class="head">
       <div class="sombre"></div>
       <div class="text">
-        <h1 style="padding-top: 50px">A PROPOS DE NOUS</h1>
-      </div>
-
-      <div class="btns">
-        <!-- <a href="#">A propos de nous</a> -->
-        <a href="contact.html">Contactez nous</a>
+        <h1>A PROPOS DE NOUS</h1>
+        <div class="btns">
+          <!-- <a href="#">A propos de nous</a> -->
+          <a href="contact.html">Contactez nous</a>
+        </div>
       </div>
     </section>
     <!-- FIN A PROPOS ENTETE -->
     <section class="container mc">
       <section class="introduction">
         <h2>Présentation de l'Institution</h2>
-        <p>
+        <p class="tj">
           L’Institut de Recherche Linguistique Appliquée (IRLA) est un
           Etablissement Public à caractère scientifique et technique chargé de
           sauvegarder et de développer le patrimoine linguistique guinéen,
@@ -548,7 +550,7 @@
         </p>
         <br />
         <h3>Les principaux objectifs de l’IRLA sont :</h3>
-        <p>
+        <p class="tj">
           Concevoir et mettre en place des programmes de recherches adaptés aux
           besoins nationaux de développement des langues nationales ; Promouvoir
           la recherche linguistique et sociolin guistique ; Valoriser les
@@ -611,7 +613,7 @@
             />
           </div>
 
-          <div class="discours">
+          <div class="discours tj">
             <h4>Chers internautes,</h4>
             <p>
               C’est avec un grand plaisir que je vous souhaite la bienvenue sur
@@ -697,7 +699,7 @@
             <img src="./images/histoire2.jpg" alt="" />
           </div>
           <div class="hd">
-            <p>
+            <p class="tj">
               L’Académie des Langues avait, en particulier, pour mission de
               travailler sur le corpus des langues guinéennes (description
               phonologique, morphosyntaxique, lexicale…) et de mener des
@@ -721,7 +723,7 @@
 
       <section class="nos-valeurs">
         <h2>Nos valeurs fondamentales</h2>
-        <div class="cards">
+        <div class="cards tj">
           <ul>
             <li>
               <h4>
@@ -916,7 +918,7 @@
       <section class="vision-strategie">
         <div class="gauche">
           <h2>Notre vision et notre stratégie</h2>
-          <p>
+          <p class="tj">
             L’IRLA ambitionne de faire des langues nationales un levier de
             développement, d’inclusion sociale et de renforcement identitaire.
             Notre stratégie repose sur une approche scientifique, participative
@@ -1237,8 +1239,8 @@
             src="./images/logo_irla.jpg"
             alt="logo-irla"
           />
-          <p></p>
-          <p>
+
+          <p class="tj">
             L’Institut de Recherche Linguistique Appliquée (IRLA)
             <span class="no-mobile">
               œuvre à la valorisation, à la sauvegarde et à la </span
