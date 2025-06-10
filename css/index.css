@@ -98,6 +98,11 @@ header .contact .tel {
   margin-left: auto;
   display: flex;
   gap: 3px;
+  align-items: center;
+}
+.tel img {
+  width: 30px;
+  height: 30px;
 }
 
 header nav form {
@@ -309,13 +314,12 @@ header nav form input {
 .tla {
   color: white;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 3px 10px;
   background-color: #e3923d;
   border-radius: 40px;
-}
-.tla {
   margin: auto;
 }
+
 .btns a:hover,
 .tla:hover,
 .actualites .cards .card a:hover {
@@ -391,15 +395,14 @@ header nav form input {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
 }
-.actualites .card a,
-.vision-strategie a {
+.actualites .card a {
   text-decoration: none;
   color: white;
-  padding: 5px 15px;
+  padding: 3px 10px;
   background-color: #e3923d;
   width: fit-content;
   border-radius: 20px;
-  font-size: 1.12rem;
+  font-size: 1rem;
 }
 /* FIN SECTION  ACTUALITES*/
 
